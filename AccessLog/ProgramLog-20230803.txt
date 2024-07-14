@@ -1,0 +1,35 @@
+*****  Log Start  *****
+[8/3/2023 5:12:19 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"V1","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"UserName","Password":"Password","NewPassword":null,"CompanyAutoId":0,"SubmitterAutoId":0,"ShipAutoId":0,"CheckWriteBy":0,"ChartOfAccount":null,"PageIndex":0,"PageSize":0,"FromDate":null,"ToDate":null,"CheckFromDate":null,"CheckToDate":null}
+*****  Log End  *****
+*****  Log Start  *****
+[8/3/2023 5:22:23 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"V1","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"Admin","Password":"123","NewPassword":null,"CompanyAutoId":0,"SubmitterAutoId":0,"ShipAutoId":0,"CheckWriteBy":0,"ChartOfAccount":null,"PageIndex":0,"PageSize":0,"FromDate":null,"ToDate":null,"CheckFromDate":null,"CheckToDate":null}
+*****  Log End  *****
+*****  Log Start  *****
+[8/3/2023 5:24:51 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"Admin","Password":"123","NewPassword":null,"CompanyAutoId":0,"SubmitterAutoId":0,"ShipAutoId":0,"CheckWriteBy":0,"ChartOfAccount":null,"PageIndex":0,"PageSize":0,"FromDate":null,"ToDate":null,"CheckFromDate":null,"CheckToDate":null}
+*****  Log End  *****
+*****  Log Start  *****
+[8/3/2023 5:24:59 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"Admin","Password":"123","NewPassword":null,"CompanyAutoId":0,"SubmitterAutoId":0,"ShipAutoId":0,"CheckWriteBy":0,"ChartOfAccount":null,"PageIndex":0,"PageSize":0,"FromDate":null,"ToDate":null,"CheckFromDate":null,"CheckToDate":null}
+*****  Log End  *****
+*****  Log Start  *****
+[8/3/2023 5:26:01 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"Admin","Password":"123","NewPassword":null,"CompanyAutoId":0,"SubmitterAutoId":0,"ShipAutoId":0,"CheckWriteBy":0,"ChartOfAccount":null,"PageIndex":0,"PageSize":0,"FromDate":null,"ToDate":null,"CheckFromDate":null,"CheckToDate":null}
+*****  Log End  *****
+*****  Log Start  *****
+[8/3/2023 6:45:58 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"POSPrior","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"Admin","Password":"123","NewPassword":null,"CompanyAutoId":0,"SubmitterAutoId":0,"ShipAutoId":0,"CheckWriteBy":0,"ChartOfAccount":null,"PageIndex":0,"PageSize":0,"FromDate":null,"ToDate":null,"CheckFromDate":null,"CheckToDate":null}
+*****  Log End  *****
+*****  Log Start  *****
+[8/3/2023 6:47:36 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"Admin","Password":"123","NewPassword":null,"CompanyAutoId":0,"SubmitterAutoId":0,"ShipAutoId":0,"CheckWriteBy":0,"ChartOfAccount":null,"PageIndex":0,"PageSize":0,"FromDate":null,"ToDate":null,"CheckFromDate":null,"CheckToDate":null}
+*****  Log End  *****

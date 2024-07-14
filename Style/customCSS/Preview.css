@@ -1,0 +1,59 @@
+﻿
+
+/*-----------------------------------------------------------------------------------*/
+.noborder {
+border:none;
+}
+
+.filediv {
+    border: 1px solid #dddfe2;
+    margin: 2%;
+    background-color: #F6F7F9;
+    width: 96%;
+}
+
+.innerdiv {
+    width: 100%;
+    height: 175px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.innerdivimg {
+    max-width: 100%;
+    max-height: 175px;
+}
+
+.txtarea {
+    width: 100%;
+    border: none;
+}
+
+.filediv .txtarea {
+    max-width: 100% !important;
+}
+
+.divrow .col-lg-3 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.modal-header-modify {
+  min-height: 16.428571429px;
+  padding: 15px;
+  border-bottom: 1px none #e5e5e5;
+}
+.btndiv .chkbox{
+    margin-left:5px !important;
+    float:left;
+}
+.btndiv .close {
+    margin-right: 5px;                               
+    color:red;
+    opacity:1.2;
+}
+.btndiv {
+    height: 21px;
+    width: 100%;
+}
+
+

@@ -1,0 +1,10 @@
+*****  Log Start  *****
+[9/22/2023 1:13:25 PM]
+[API Method]	CreateCustomerAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":"","EmailId":"","PaymentMethod":null,"CategoryId":0,"FirstName":"Ankit","LastName":"Srivastava","DOB":"","Address":null,"State":"","City":"","ZipCode":"","OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/22/2023 1:13:58 PM]
+[API Method]	CreateCustomerAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":"","EmailId":"","PaymentMethod":null,"CategoryId":0,"FirstName":"Ankit","LastName":"Srivastava","DOB":"","Address":"","State":"","City":"","ZipCode":"","OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****

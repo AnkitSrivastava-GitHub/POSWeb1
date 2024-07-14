@@ -1,0 +1,22 @@
+USE [pos101.priorpos.com]
+GO
+
+/****** Object:  Table [dbo].[ScreenMaster]    Script Date: 10/31/2023 3:57:12 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ScreenMaster](
+	[AutoId] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](80) NOT NULL,
+	[Status] [int] NOT NULL,
+ CONSTRAINT [PK_ScreenMaster] PRIMARY KEY CLUSTERED 
+(
+	[AutoId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+

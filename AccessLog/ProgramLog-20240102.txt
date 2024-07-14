@@ -1,0 +1,75 @@
+*****  Log Start  *****
+[01/02/2024 12:06:06 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"V1","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"UserName","InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":"Password","ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 12:15:19 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"V1","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"UserName","InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":"Password","ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 12:18:02 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"V1","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"UserName","InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":"Password","ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 12:19:22 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"V1","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"CashierCa","InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":"123","ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 12:20:48 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"V1","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"CashierCa","InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":"123","ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 12:37:37 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"V1","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"CashierCa","InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":"123","ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 12:45:59 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"V1","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"CashierCa","InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":"123","ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 12:47:28 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"V1","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"CashierCa","InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":"123","ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 1:04:35 PM]
+[API Method]	CategoryListAPI
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":null,"AppVersion":"V1","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":"","Password":null,"ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 1:15:56 PM]
+[API Method]	CategoryListAPI
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":null,"AppVersion":"V1","RequestSource":"IOS","LoginId":"CashierCa","AutoId":3}{"UserName":null,"InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":"","Password":null,"ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 1:35:18 PM]
+[API Method]	CategoryListAPI
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":null,"AppVersion":"V1","RequestSource":"IOS","LoginId":"CashierCa","AutoId":3}{"UserName":null,"InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"StoreId":3,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 1:42:28 PM]
+[API Method]	CategoryListAPI
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":null,"AppVersion":"V1","RequestSource":"IOS","LoginId":"CashierCa","AutoId":3}{"UserName":null,"InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"StoreId":3,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 2:35:48 PM]
+[API Method]	GetTerminalList
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":null,"AppVersion":"V1","RequestSource":"IOS","LoginId":"CashierCa","AutoId":3}{"UserName":null,"InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"StoreId":3,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 2:38:42 PM]
+[API Method]	GetTerminalList
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":null,"AppVersion":"V1","RequestSource":"IOS","LoginId":"CashierCa","AutoId":3}{"UserName":null,"InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"StoreId":3,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[01/02/2024 2:40:06 PM]
+[API Method]	GetTerminalList
+[Stack Trace]	{"AccessToken":"AccessToken","Hashkey":"Hashkey","DeviceId":"Andro8.5","LatLong":null,"AppVersion":"V1","RequestSource":"IOS","LoginId":"CashierCa","AutoId":3}{"UserName":null,"InvoiceNo":null,"InvoiceAutoId":0,"CustomerName":null,"InvoiceFromDate":null,"InvoiceToDate":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":null,"OrderNo":null,"CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"StoreId":3,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":0,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****

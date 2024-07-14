@@ -1,0 +1,165 @@
+*****  Log Start  *****
+[9/7/2023 3:53:58 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.0.0.1","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"1234sdfhgsdh","OrderNo":"","CategoryId":0,"OrderId":0,"CustomerId":1,"Quantity":2,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 3:56:37 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.0.0.1","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"1234sdfhgsdh","OrderNo":"","CategoryId":0,"OrderId":0,"CustomerId":1,"Quantity":2,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 3:57:26 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"1234sdfhgsdh","OrderNo":"","CategoryId":0,"OrderId":0,"CustomerId":1,"Quantity":2,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 4:09:21 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"1234sdfhgsdh","OrderNo":"ODR100001","CategoryId":0,"OrderId":0,"CustomerId":1,"Quantity":2,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 4:11:40 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"685141910076","OrderNo":"ODR100001","CategoryId":0,"OrderId":0,"CustomerId":1,"Quantity":2,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 4:14:23 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"685141910076","OrderNo":"","CategoryId":0,"OrderId":0,"CustomerId":1,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 4:15:15 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"685141910076","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":2,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 4:17:00 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"685141910076","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":3,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 4:17:43 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcde","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 4:22:24 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcde","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 4:23:23 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123bde","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 4:24:29 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcode","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 5:00:27 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"Combo2","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 5:03:25 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"12345fdhjfdhfd","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 5:03:46 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"12345fdhjfdhfd","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":3,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 5:25:54 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"12345fdhjfdhfd","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":3,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 6:00:45 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"1234sdfhgsdh","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":3,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 6:01:03 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"1234sdfhgsdh","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":2,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 6:07:40 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"1234sdfhgsdh","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":2,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 6:08:00 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"1234sdfhgsdh","OrderNo":"ODR100002","CategoryId":0,"OrderId":2,"CustomerId":1,"Quantity":3,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 6:26:41 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"1234sdfhgsdh","OrderNo":"","CategoryId":0,"OrderId":0,"CustomerId":1,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 7:44:01 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"1234sdfhgsdh","OrderNo":"ODR100003","CategoryId":0,"OrderId":3,"CustomerId":1,"Discount":0.0,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 7:45:03 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"1234sdfhgsdh","OrderNo":"ODR100003","CategoryId":0,"OrderId":3,"CustomerId":1,"Discount":0.0,"Quantity":2,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 7:46:04 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcode","OrderNo":"ODR100003","CategoryId":0,"OrderId":3,"CustomerId":1,"Discount":0.0,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 7:48:01 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcode","OrderNo":"ODR100003","CategoryId":0,"OrderId":3,"CustomerId":1,"Discount":0.0,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 7:49:58 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcode","OrderNo":"ODR100003","CategoryId":0,"OrderId":3,"CustomerId":1,"Discount":10.0,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 7:51:15 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcode","OrderNo":"ODR100003","CategoryId":0,"OrderId":3,"CustomerId":1,"Discount":10.0,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 7:52:14 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcode","OrderNo":"ODR100003","CategoryId":0,"OrderId":3,"CustomerId":1,"Discount":10.0,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 7:52:42 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcode","OrderNo":"ODR100003","CategoryId":0,"OrderId":3,"CustomerId":1,"Discount":5.00,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 7:52:58 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcode","OrderNo":"ODR100003","CategoryId":0,"OrderId":3,"CustomerId":1,"Discount":5.32,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 7:55:08 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcode","OrderNo":"ODR100003","CategoryId":0,"OrderId":3,"CustomerId":1,"Discount":5.32,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 7:55:51 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcode","OrderNo":"ODR100003","CategoryId":0,"OrderId":3,"CustomerId":1,"Discount":0.0,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/7/2023 7:59:58 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcode","OrderNo":"ODR100003","CategoryId":0,"OrderId":3,"CustomerId":1,"Discount":0.0,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****

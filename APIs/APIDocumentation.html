@@ -1,0 +1,3225 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>API Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .w3-container, .w3-panel {
+            padding: 0px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-top">
+        <div class="w3-bar w3-black w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Log In/Out APIs List<i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#Login" class="w3-bar-item w3-button">Login</a>
+                    <a href="#GetCurrencyList" class="w3-bar-item w3-button">Get Currency List</a>
+                    <a href="#ProceedCurrencyTerminal" class="w3-bar-item w3-button">Proceed Currency and Terminal Details</a>
+                    <a href="#GetEndShiftDetails" class="w3-bar-item w3-button">Get End Shift Details</a>
+                    <a href="#ProceedClosingDetails" class="w3-bar-item w3-button">Proceed Closing Details</a>
+                </div>
+            </div>
+
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Action Pop Up APIs List<i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#GetActionButtonList" class="w3-bar-item w3-button">Get Action Button List</a>
+                    <a href="#NoSale" class="w3-bar-item w3-button">No Sale</a>
+                    <a href="#GetScreenList" class="w3-bar-item w3-button">Screen List</a>
+                    <a href="#InsertUpdateDeleteScreen" class="w3-bar-item w3-button">Insert Update and Delete Screen</a>
+                    <a href="#DropdownList" class="w3-bar-item w3-button">Dropdown List</a>
+                    <a href="#GetAddToScreenProductList" class="w3-bar-item w3-button">Get Add To Screen ProductList</a>
+                    <a href="#AddProductToScreens" class="w3-bar-item w3-button">Add Product To Screens</a>
+                    <a href="#GetScreenProductList" class="w3-bar-item w3-button">Get Screen Product List</a>
+                    <a href="#GetMultiPackingProduct" class="w3-bar-item w3-button">Get Multi Packing Product</a>
+                    <a href="#GetCustomerList" class="w3-bar-item w3-button">Customer List</a>
+                    <a href="#AddCustomer" class="w3-bar-item w3-button">Add Customer</a>
+                    <a href="#ClockInOut" class="w3-bar-item w3-button">Clock In/Out</a>
+                    <a href="#GetCustomerDetails" class="w3-bar-item w3-button">Get Customer Details</a>
+                    <a href="#GetPayNowButtonList" class="w3-bar-item w3-button">Get Pay Now Button List</a>
+                    <a href="#GetSecurityPin" class="w3-bar-item w3-button">Get Security Pin</a>
+                    
+                </div>
+            </div>
+
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">Cart APIs List<i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#AddProductToCart" class="w3-bar-item w3-button">Add Product To Cart</a>
+                    <a href="#GetProductFromBarcode" class="w3-bar-item w3-button">Get Product From Barcode</a>
+                    <a href="#AddGiftCard" class="w3-bar-item w3-button">Add Gift Card</a>
+                    <a href="#ApplyGiftCard" class="w3-bar-item w3-button">Apply Gift Card</a>
+                    <a href="#GetCouponDetails" class="w3-bar-item w3-button">Get Coupon Details</a>
+                    <a href="#ApplyDiscount" class="w3-bar-item w3-button">Apply Discount</a>
+                    <a href="#GetCartDetails" class="w3-bar-item w3-button">Get Cart Details</a>
+                    <a href="#GetRewardPointDetails" class="w3-bar-item w3-button">Get Reward Point Details</a>
+                    <a href="#GetCreditCardList" class="w3-bar-item w3-button">Get Credit Card List</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page content -->
+    <div class="w3-content" style="max-width: 2000px; margin-top: 46px">
+        <div class="w3-container w3-content w3-padding-64" style="max-width: 90%" id="api">
+            <h1>Priorware POS API Documentation</h1>
+            <span style="color: red"><b>Base Url :  </b>https://pos101.priorpos.com/APIs</span>
+            <div class="w3-padding-32" id="Login">
+                <div class="w3-button w3-block w3-black w3-left-align">Login</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/LoginAPI.asmx/Login</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                        {
+                                          "requestContainer": {
+                                            "AccessToken": "AccessToken",
+                                            "Hashkey": "Hashkey",
+                                            "DeviceId": "Andro8.5",
+                                            "LatLong": "7854859,44784574",
+                                            "AppVersion": "V1",
+                                            "RequestSource": "IOS"
+                                          },
+                                          "requestData": {
+                                            "UserName": "UserName",
+                                            "Password": "Password"
+                                          }
+                                        }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                    {
+                                        "d": {
+                                            "responseMessage": "Success",
+                                            "responseCode": "200",
+                                            "responseData": [
+                                                {
+                                                    "LoginDetails": [
+                                                        {
+                                                            "UserAutoId": 4,
+                                                            "EmpTypeNo": 4,
+                                                            "EmpType": "Cashier",
+                                                            "Name": "Cashier ca",
+                                                            "UserName": "cashierpos",
+                                                            "CompanyName": "Demo - POS",
+                                                            "BalanceStatus": "Break",
+                                                            "StoreId": 1,
+                                                            "LogInAutoId": 1647,
+                                                            "CurrencySymbol": "₹"
+                                                        }
+                                                    ],
+                                                    "TerminalList": [
+                                                        {
+                                                            "AutoId": 1,
+                                                            "TerminalName": "Terminal 1",
+                                                            "OccupyStatus": 1,
+                                                            "CurrentUser": 4
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetCurrencyList">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Currency List</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/LoginAPI.asmx/GetCurrencyList</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "requestContainer": {
+                                            "AccessToken": "POSPriorware",
+                                            "Hashkey": "POS#@2023Priorware",
+                                            "DeviceId": "",
+                                            "LatLong": "7854859,44784574",
+                                            "AppVersion": "1.0.0.1",
+                                            "RequestSource": "IOS",
+                                            "LoginId": "cashierCa",
+                                            "AutoId": 4
+                                        },
+                                        "requestData": {
+                                            "StoreId": "1",
+                                            "TerminalId": "1"
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                  {
+                                    "d": {
+                                        "responseMessage": "Success",
+                                        "responseCode": "200",
+                                        "responseData": [
+                                            {
+                                                "ClosingBalance": 0.00,
+                                                "ClosingDate": "01/09/2024",
+                                                "CurrencyDetails": [
+                                                    {
+                                                        "AutoId": 10,
+                                                        "QTY": 0,
+                                                        "CurrencyAutoId": 10,
+                                                        "Amount": 0.01
+                                                    },
+                                                    {
+                                                        "AutoId": 11,
+                                                        "QTY": 0,
+                                                        "CurrencyAutoId": 11,
+                                                        "Amount": 0.05
+                                                    },
+                                                    {
+                                                        "AutoId": 12,
+                                                        "QTY": 0,
+                                                        "CurrencyAutoId": 12,
+                                                        "Amount": 0.10
+                                                    },
+                                                    {
+                                                        "AutoId": 13,
+                                                        "QTY": 0,
+                                                        "CurrencyAutoId": 13,
+                                                        "Amount": 0.25
+                                                    },
+                                                    {
+                                                        "AutoId": 1,
+                                                        "QTY": 0,
+                                                        "CurrencyAutoId": 1,
+                                                        "Amount": 1.00
+                                                    },
+                                                    {
+                                                        "AutoId": 2,
+                                                        "QTY": 0,
+                                                        "CurrencyAutoId": 2,
+                                                        "Amount": 5.00
+                                                    },
+                                                    {
+                                                        "AutoId": 3,
+                                                        "QTY": 0,
+                                                        "CurrencyAutoId": 3,
+                                                        "Amount": 10.00
+                                                    },
+                                                    {
+                                                        "AutoId": 4,
+                                                        "QTY": 0,
+                                                        "CurrencyAutoId": 4,
+                                                        "Amount": 20.00
+                                                    },
+                                                    {
+                                                        "AutoId": 5,
+                                                        "QTY": 0,
+                                                        "CurrencyAutoId": 5,
+                                                        "Amount": 50.00
+                                                    },
+                                                    {
+                                                        "AutoId": 6,
+                                                        "QTY": 0,
+                                                        "CurrencyAutoId": 6,
+                                                        "Amount": 100.00
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="ProceedCurrencyTerminal">
+                <div class="w3-button w3-block w3-black w3-left-align">Proceed Currency and Terminal Details</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/LoginAPI.asmx/ProceedCurrencyTerminal</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                {
+                                    "requestContainer": {
+                                                    "AccessToken": "AccessToken",
+                                                    "Hashkey": "Hashkey",
+                                                    "DeviceId": "Andro8.5",
+                                                    "AppVersion": "V1",
+                                                    "RequestSource": "IOS",
+                                                    "LoginId":"Cashier1",
+                                                    "AutoId":8
+                                             },
+                                    "requestData":{
+                                                "StoreId":"2",
+                                                "TerminalId":"3",
+                                                "LoginAutoId":"196",
+                                                "BalanceStatus": "Break",
+                                                "OpeningBalance":"15.99",                                           
+                                                "CurrencyTable":[
+                                                            {"CurrencyID":"10","QTY":"9"},
+                                                            {"CurrencyID":"11","QTY":"1"},
+                                                            {"CurrencyID":"12","QTY":"1"},
+                                                            {"CurrencyID":"13","QTY":"3"},
+                                                            {"CurrencyID":"1","QTY":"0"},
+                                                            {"CurrencyID":"2","QTY":"1"},
+                                                            {"CurrencyID":"3","QTY":"1"},
+                                                            {"CurrencyID":"4","QTY":"0"},
+                                                            {"CurrencyID":"5","QTY":"0"},
+                                                            {"CurrencyID":"6","QTY":"0"}
+                                                         ]
+                                             }
+                                    }
+                    </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                      {
+                                        "d": {
+                                            "responseMessage": "Success",
+                                            "responseCode": "200",
+                                            "responseData": [
+                                                {
+                                                    "BalanceMaster": [
+                                                        {
+                                                            "ShiftId": 112,
+                                                            "TerminalAutoId": 1,
+                                                            "AlreadyAssignedStatus": 1,
+                                                            "TerminalName": "Terminal 1",
+                                                            "BalanceStatus": "Break"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                    </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetEndShiftDetails">
+                <div class="w3-button w3-block w3-black w3-left-align">Get End Shift Details</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetEndShiftDetails</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                {
+                                "requestContainer": {
+                                "AccessToken": "POSPriorware",
+                                "Hashkey": "POS#@2023Priorware",
+                                "DeviceId": "",
+                                "LatLong": "7854859,44784574",
+                                "AppVersion": "1.0.0.1",
+                                "RequestSource": "IOS",
+                                "LoginId": "cashierCa",
+                                "AutoId": 4
+                                },
+                                "requestData": {
+                                "StoreId": "1",
+                                "TerminalId": "1",
+                                "ShiftId": "20"
+                                }
+                                }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "d": {
+                                            "responseMessage": "Back from break!",
+                                            "responseCode": "200",
+                                            "responseData": null
+                                        }
+                                    }
+                                 </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="ProceedClosingDetails">
+                <div class="w3-button w3-block w3-black w3-left-align">Proceed Closing Details</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/ProceedClosingDetails</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                        {
+                                          "requestContainer": {
+                                            "AccessToken": "POSPriorware",
+                                            "AppVersion": "1.0.0.1",
+                                            "AutoId": 4,
+                                            "DeviceId": "ad09a8aaf5940d53",
+                                            "Hashkey": "POS#@2023Priorware",
+                                            "LatLong": "7854859,44784574",
+                                            "LoginId": "cashierCa",
+                                            "RequestSource": "IOS"
+                                          },
+                                          "requestData": {
+                                            "BalanceStatus": "Break",
+                                            "ClosingBalance": "60.00",
+                                            "CurrencyTable": [
+                                              {
+                                                "CurrencyID": "10",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "11",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "12",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "13",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "1",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "2",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "3",
+                                                "QTY": "1"
+                                              },
+                                              {
+                                                "CurrencyID": "4",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "5",
+                                                "QTY": "1"
+                                              },
+                                              {
+                                                "CurrencyID": "6",
+                                                "QTY": "0"
+                                              }
+                                            ],
+                                            "CurrentBalance": "0.06",
+                                            "CurrentBalanceStatus": "exact",
+                                            "ShiftId": "20",
+                                            "StoreId": "1",
+                                            "TerminalId": "1"
+                                          }
+                                        }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                         {
+                            "d": {
+                                "responseMessage": "Back from break!",
+                                "responseCode": "200",
+                                "responseData": null
+                            }
+                        }
+                     </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetActionButtonList">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Action Button List</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetActionButtonList</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                               {
+                                    "requestContainer": {
+                                        "AccessToken": "POSPriorware",
+                                        "Hashkey": "POS#@2023Priorware",
+                                        "DeviceId": "",
+                                        "LatLong": "7854859,44784574",
+                                        "AppVersion": "1.0.0.1",
+                                        "RequestSource": "IOS",
+                                        "LoginId": "cashierCa",
+                                        "AutoId": 4
+                                    },
+                                    "requestData": {
+                                        "StoreId": "1"        
+                                    }
+                                }
+                 </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "d": {
+                                            "responseMessage": "Success",
+                                            "responseCode": "200",
+                                            "responseData": [
+                                                {
+                                                    "ActionButtonList": [
+                                                        {
+                                                            "AutoId": 1,
+                                                            "ButtonName": "No Sale",
+                                                            "ButtonColor": "#526f84",
+                                                            "SeqNo": 1
+                                                        },
+                                                        {
+                                                            "AutoId": 2,
+                                                            "ButtonName": "Save as Draft Order",
+                                                            "ButtonColor": "#ff996b",
+                                                            "SeqNo": 2
+                                                        },
+                                                        {
+                                                            "AutoId": 3,
+                                                            "ButtonName": "Draft List",
+                                                            "ButtonColor": "#4cbb9f",
+                                                            "SeqNo": 3
+                                                        },
+                                                        {
+                                                            "AutoId": 4,
+                                                            "ButtonName": "Discount",
+                                                            "ButtonColor": "#92afa0",
+                                                            "SeqNo": 4
+                                                        },
+                                                        {
+                                                            "AutoId": 5,
+                                                            "ButtonName": "Add Screen",
+                                                            "ButtonColor": "#c98069",
+                                                            "SeqNo": 5
+                                                        },
+                                                        {
+                                                            "AutoId": 7,
+                                                            "ButtonName": "Add To Screen",
+                                                            "ButtonColor": "#c98069",
+                                                            "SeqNo": 6
+                                                        },
+                                                        {
+                                                            "AutoId": 8,
+                                                            "ButtonName": "Deposit",
+                                                            "ButtonColor": "#cab287",
+                                                            "SeqNo": 7
+                                                        },
+                                                        {
+                                                            "AutoId": 9,
+                                                            "ButtonName": "Withdraw",
+                                                            "ButtonColor": "#f6cacb",
+                                                            "SeqNo": 8
+                                                        },
+                                                        {
+                                                            "AutoId": 10,
+                                                            "ButtonName": "Safe Cash List",
+                                                            "ButtonColor": "#929a68",
+                                                            "SeqNo": 9
+                                                        },
+                                                        {
+                                                            "AutoId": 11,
+                                                            "ButtonName": "Payout",
+                                                            "ButtonColor": "#e4d973",
+                                                            "SeqNo": 10
+                                                        },
+                                                        {
+                                                            "AutoId": 12,
+                                                            "ButtonName": "Payout List",
+                                                            "ButtonColor": "#e4d973",
+                                                            "SeqNo": 11
+                                                        },
+                                                        {
+                                                            "AutoId": 13,
+                                                            "ButtonName": "Invoice List",
+                                                            "ButtonColor": "#4c74bb",
+                                                            "SeqNo": 12
+                                                        },
+                                                        {
+                                                            "AutoId": 14,
+                                                            "ButtonName": "End Shift",
+                                                            "ButtonColor": "#ff0000",
+                                                            "SeqNo": 13
+                                                        },
+                                                        {
+                                                            "AutoId": 15,
+                                                            "ButtonName": "Clock In/Out",
+                                                            "ButtonColor": "#9bcdff",
+                                                            "SeqNo": 14
+                                                        },
+                                                        {
+                                                            "AutoId": 16,
+                                                            "ButtonName": "Sale Gift Card",
+                                                            "ButtonColor": "#9bcdff",
+                                                            "SeqNo": 15
+                                                        },
+                                                        {
+                                                            "AutoId": 17,
+                                                            "ButtonName": "Gift Card Look Up",
+                                                            "ButtonColor": "#9bcdff",
+                                                            "SeqNo": 16
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                            </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="NoSale">
+                <div class="w3-button w3-block w3-black w3-left-align">No Sale</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/NoSale</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                    {
+                                           "requestContainer": {
+                                            "AccessToken": "AccessToken",
+                                            "Hashkey": "Hashkey",
+                                            "DeviceId": "Andro8.5",
+                                            "LatLong": "7854859,44784574",
+                                            "AppVersion": "V1",
+                                            "RequestSource": "IOS",
+                                            "LoginId":"cashierCa",
+                                            "AutoId":3
+                                           },
+                                           "requestData":{
+                                             "StoreId":"3",
+                                             "TerminalId":"1",
+                                             "Action":"1",                                             
+                                             "Remark":"Test Remark for no sale via API."
+                                           }
+                                         }
+                             </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                             {
+                                "d": {
+                                    "responseMessage": "No Sale remark saved successfully.",
+                                    "responseCode": "200",
+                                    "responseData": ""
+                                }
+                            }
+                        </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetScreenList">
+                <div class="w3-button w3-block w3-black w3-left-align">Screen List</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetScreenList</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                    {
+                                           "requestContainer": {
+                                            "AccessToken": "AccessToken",
+                                            "Hashkey": "Hashkey",
+                                            "DeviceId": "Andro8.5",
+                                            "LatLong": "7854859,44784574",
+                                            "AppVersion": "V1",
+                                            "RequestSource": "IOS",
+                                            "LoginId":"cashierCa",
+                                            "AutoId":3
+                                           },
+                                           "requestData":{
+                                             "StoreId":"3",
+                                             "SearchString":""
+                                           }
+                                         }
+                         </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                              {
+                                "d": {
+                                    "responseMessage": "Success",
+                                    "responseCode": "200",
+                                    "responseData": [
+                                        {
+                                            "ScreenList": [
+                                                {
+                                                    "AutoId": 5,
+                                                    "Name": "Home Screen",
+                                                    "Status": 1
+                                                },
+                                                {
+                                                    "AutoId": 6,
+                                                    "Name": "Lottery",
+                                                    "Status": 1
+                                                },
+                                                {
+                                                    "AutoId": 18,
+                                                    "Name": "Offers",
+                                                    "Status": 1
+                                                },
+                                                {
+                                                    "AutoId": 25,
+                                                    "Name": "Screen 1",
+                                                    "Status": 1
+                                                },
+                                                {
+                                                    "AutoId": 17,
+                                                    "Name": "SKU",
+                                                    "Status": 1
+                                                },
+                                                {
+                                                    "AutoId": 30,
+                                                    "Name": "Test 1",
+                                                    "Status": 1
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                            </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="InsertUpdateDeleteScreen">
+                <div class="w3-button w3-block w3-black w3-left-align">Insert Update and Delete Screen</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/InsertUpdateDeleteScreen</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                   {
+                                   "requestContainer": {
+                                                    "AccessToken": "AccessToken",
+                                                    "Hashkey": "Hashkey",
+                                                    "DeviceId": "Andro8.5",
+                                                    "LatLong": "7854859,44784574",
+                                                    "AppVersion": "V1",
+                                                    "RequestSource": "IOS",
+                                                    "LoginId":"cashierCa",
+                                                    "AutoId":3
+                                                    },
+                                    "requestData":{
+                                                    "StoreId":"3",
+                                                    "Action":"1",
+                                                    "ScreenAutoId":"29",
+                                                    "ScreenName":"Test 1",
+                                                    "Status":1
+                                                }
+                            }
+                            </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                 {
+                    "d": {
+                        "responseMessage": "Screen saved successfully.",
+                        "responseCode": "200",
+                        "responseData": ""
+                    }
+                }
+                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="DropdownList">
+                <div class="w3-button w3-block w3-black w3-left-align">Dropdown List</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/GetDropdownList.asmx/DropdownList</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                       {
+                                           "requestContainer": {
+                                            "AccessToken": "AccessToken",
+                                            "Hashkey": "Hashkey",
+                                            "DeviceId": "Andro8.5",
+                                            "LatLong": "7854859,44784574",
+                                            "AppVersion": "V1",
+                                            "RequestSource": "IOS",
+                                            "LoginId":"cashierCa",
+                                            "AutoId":3
+                                           },
+                                           "requestData":{
+                                             "StoreId":"3",
+                                             "TerminalId":"1" 
+                                           }
+                                         }
+                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "d": {
+                                            "responseMessage": "Success",
+                                            "responseCode": "200",
+                                            "responseData": [
+                                                {
+                                                    "DepartmentDDLList": [
+                                                        {
+                                                            "AutoId": 4,
+                                                            "DepartmentName": "Beer"
+                                                        },
+                                                        {
+                                                            "AutoId": 8,
+                                                            "DepartmentName": "Cindrella"
+                                                        },
+                                                        {
+                                                            "AutoId": 6,
+                                                            "DepartmentName": "General"
+                                                        },
+                                                        {
+                                                            "AutoId": 3,
+                                                            "DepartmentName": "Liquor"
+                                                        },
+                                                        {
+                                                            "AutoId": 7,
+                                                            "DepartmentName": "Lottery"
+                                                        },
+                                                        {
+                                                            "AutoId": 1,
+                                                            "DepartmentName": "Other Department"
+                                                        },
+                                                        {
+                                                            "AutoId": 5,
+                                                            "DepartmentName": "Tobacco"
+                                                        },
+                                                        {
+                                                            "AutoId": 2,
+                                                            "DepartmentName": "Wine"
+                                                        }
+                                                    ],
+                                                    "ScreenDDLList": [
+                                                        {
+                                                            "AutoId": 1,
+                                                            "Name": "Home Screen",
+                                                            "Status": 1
+                                                        },
+                                                        {
+                                                            "AutoId": 2,
+                                                            "Name": "Lottery",
+                                                            "Status": 1
+                                                        },
+                                                        {
+                                                            "AutoId": 3,
+                                                            "Name": "Wine",
+                                                            "Status": 1
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                              </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetAddToScreenProductList">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Add To Screen Product List</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetAddToScreenProductList</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                {
+                    "requestContainer": {
+                        "AccessToken": "POSPriorware",
+                        "Hashkey": "POS#@2023Priorware",
+                        "DeviceId": "",
+                        "LatLong": "7854859,44784574",
+                        "AppVersion": "1.0.0.1",
+                        "RequestSource": "IOS",
+                        "LoginId": "cashierCa",
+                        "AutoId": 4
+                    },
+                    "requestData": {
+                        "StoreId": "1",
+                        "Department": "5",
+                        "ScreenId": "8",
+                        "SearchString": ""
+                    }
+                }
+        </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                         {
+                            "d": {
+                                "responseMessage": "Success",
+                                "responseCode": "200",
+                                "responseData": [
+                                    {
+                                        "AddToScreenProductList": [
+                                            {
+                                                "AutoId": 351,
+                                                "ProductName": "Am Spirit Black - Box",
+                                                "ImagePath": "",
+                                                "Checked": 1,
+                                                "Type": "Product"
+                                            },
+                                            {
+                                                "AutoId": 352,
+                                                "ProductName": "Am Spirit Blue - Box",
+                                                "ImagePath": "",
+                                                "Checked": 1,
+                                                "Type": "Product"
+                                            },
+                                            {
+                                                "AutoId": 353,
+                                                "ProductName": "Am Spirit Orange - Box",
+                                                "ImagePath": "",
+                                                "Checked": 1,
+                                                "Type": "Product"
+                                            },
+                                            {
+                                                "AutoId": 10244,
+                                                "ProductName": "Winston Red 100 - Box",
+                                                "ImagePath": "",
+                                                "Checked": 1,
+                                                "Type": "Product"
+                                            },
+                                            {
+                                                "AutoId": 10245,
+                                                "ProductName": "Winston White 100 - Box",
+                                                "ImagePath": "",
+                                                "Checked": 1,
+                                                "Type": "Product"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetEndShiftDetails">
+                <div class="w3-button w3-block w3-black w3-left-align">Get End Shift Details</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetEndShiftDetails</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                   {
+                                    "requestContainer": {
+                                        "AccessToken": "POSPriorware",
+                                        "Hashkey": "POS#@2023Priorware",
+                                        "DeviceId": "",
+                                        "LatLong": "7854859,44784574",
+                                        "AppVersion": "1.0.0.1",
+                                        "RequestSource": "IOS",
+                                        "LoginId": "cashierpos",
+                                        "AutoId": 4
+                                    },
+                                    "requestData": {
+                                        "StoreId": "1",
+                                        "TerminalId": "1",
+                                        "ShiftId": "58"
+                                    }
+                                }
+                            </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "d": {
+                                            "responseMessage": "Success",
+                                            "responseCode": "200",
+                                            "responseData": [
+                                                {
+                                                    "CurrentCashAmt": 500.00,
+                                                    "OpenBalance": 600.00,
+                                                    "CurrencyDetails": [
+                                                        {
+                                                            "AutoId": 10,
+                                                            "Amount": 0.01
+                                                        },
+                                                        {
+                                                            "AutoId": 11,
+                                                            "Amount": 0.05
+                                                        },
+                                                        {
+                                                            "AutoId": 12,
+                                                            "Amount": 0.10
+                                                        },
+                                                        {
+                                                            "AutoId": 13,
+                                                            "Amount": 0.25
+                                                        },
+                                                        {
+                                                            "AutoId": 1,
+                                                            "Amount": 1.00
+                                                        },
+                                                        {
+                                                            "AutoId": 2,
+                                                            "Amount": 5.00
+                                                        },
+                                                        {
+                                                            "AutoId": 3,
+                                                            "Amount": 10.00
+                                                        },
+                                                        {
+                                                            "AutoId": 4,
+                                                            "Amount": 20.00
+                                                        },
+                                                        {
+                                                            "AutoId": 5,
+                                                            "Amount": 50.00
+                                                        },
+                                                        {
+                                                            "AutoId": 6,
+                                                            "Amount": 100.00
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="ProceedClosingDetails">
+                <div class="w3-button w3-block w3-black w3-left-align">Proceed Closing Details</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/ProceedClosingDetails</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                        {
+                                          "requestContainer": {
+                                            "AccessToken": "POSPriorware",
+                                            "AppVersion": "1.0.0.1",
+                                            "AutoId": 4,
+                                            "DeviceId": "ad09a8aaf5940d53",
+                                            "Hashkey": "POS#@2023Priorware",
+                                            "LatLong": "7854859,44784574",
+                                            "LoginId": "cashierpos",
+                                            "RequestSource": "IOS"
+                                          },
+                                          "requestData": {
+                                            "BalanceStatus": "Break",
+                                            "ClosingBalance": "60.00",
+                                            "CurrencyTable": [
+                                              {
+                                                "CurrencyID": "10",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "11",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "12",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "13",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "1",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "2",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "3",
+                                                "QTY": "1"
+                                              },
+                                              {
+                                                "CurrencyID": "4",
+                                                "QTY": "0"
+                                              },
+                                              {
+                                                "CurrencyID": "5",
+                                                "QTY": "1"
+                                              },
+                                              {
+                                                "CurrencyID": "6",
+                                                "QTY": "0"
+                                              }
+                                            ],
+                                            "CurrentBalance": "0.06",
+                                            "CurrentBalanceStatus": "exact",
+                                            "ShiftId": "87",
+                                            "StoreId": "1",
+                                            "TerminalId": "1"
+                                          }
+                                        }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                    {
+                                        "d": {
+                                            "responseMessage": "Success",
+                                            "responseCode": "200",
+                                            "responseData": ""
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="AddProductToScreens">
+                <div class="w3-button w3-block w3-black w3-left-align">Add Product To Screens</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/AddProductToScreens</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                       {
+                                            "requestContainer": {
+                                                "AccessToken": "POSPriorware",
+                                                "AppVersion": "1.0.0.1",
+                                                "AutoId": 4,
+                                                "DeviceId": "ad09a8aaf5940d53",
+                                                "Hashkey": "POS#@2023Priorware",
+                                                "LatLong": "7854859,44784574",
+                                                "LoginId": "cashierCa",
+                                                "RequestSource": "IOS"
+                                            },
+                                            "requestData": {
+                                                "StoreId": "1",
+                                                "ProductId": "351",
+                                                "Type":"Product",
+                                                "ScreenId":"1"
+                                            }
+                                        }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "d": {
+                                            "responseMessage": "Product added in Screen.",
+                                            "responseCode": "200",
+                                            "responseData": ""
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetScreenProductList">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Screen Product List</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetScreenProductList</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                      {
+                                        "requestContainer": {
+                                            "AccessToken": "POSPriorware",
+                                            "AppVersion": "1.0.0.1",
+                                            "AutoId": 4,
+                                            "DeviceId": "ad09a8aaf5940d53",
+                                            "Hashkey": "POS#@2023Priorware",
+                                            "LatLong": "7854859,44784574",
+                                            "LoginId": "cashierCa",
+                                            "RequestSource": "IOS"
+                                        },
+                                        "requestData": {
+                                            "StoreId": "1",        
+                                            "ScreenId":"1"
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "d": {
+                                            "responseMessage": "Success",
+                                            "responseCode": "200",
+                                            "responseData": [
+                                                {
+                                                    "ScreenId": 1,
+                                                    "ScreenName": "Home Screen",
+                                                    "ProductList": [
+                                                        {
+                                                            "AutoId": 1,
+                                                            "ProductName": "1000 STORIES ZINFANDEL 2020-750ML/12 Piece",
+                                                            "ViewImage": 1,
+                                                            "ImagePath": "",
+                                                            "SKUCount": 1,
+                                                            "Age": 18,
+                                                            "Barcode": 1,
+                                                            "SKUAutoId": 1,
+                                                            "BG_ColorCode": "#28CC9E",
+                                                            "TEXT_ColorCode": "white",
+                                                            "Quantity": 1
+                                                        },
+                                                        {
+                                                            "AutoId": 9,
+                                                            "ProductName": "14 Hands Run Wild-750ML/12 Piece",
+                                                            "ViewImage": 1,
+                                                            "ImagePath": "",
+                                                            "SKUCount": 1,
+                                                            "Age": 18,
+                                                            "Barcode": 9,
+                                                            "SKUAutoId": 9,
+                                                            "BG_ColorCode": "#28CC9E",
+                                                            "TEXT_ColorCode": "white",
+                                                            "Quantity": 1
+                                                        },
+                                                        {
+                                                            "AutoId": 10,
+                                                            "ProductName": "14 Hands Sauv Blanc-750ML/12 Piece",
+                                                            "ViewImage": 1,
+                                                            "ImagePath": "",
+                                                            "SKUCount": 1,
+                                                            "Age": 18,
+                                                            "Barcode": 10,
+                                                            "SKUAutoId": 10,
+                                                            "BG_ColorCode": "#28CC9E",
+                                                            "TEXT_ColorCode": "white",
+                                                            "Quantity": 1
+                                                        },
+                                                        {
+                                                            "AutoId": 51,
+                                                            "ProductName": "19 Crimes Marthas Chard-750ML/12 Piece",
+                                                            "ViewImage": 1,
+                                                            "ImagePath": "",
+                                                            "SKUCount": 1,
+                                                            "Age": 18,
+                                                            "Barcode": 51,
+                                                            "SKUAutoId": 51,
+                                                            "BG_ColorCode": "#28CC9E",
+                                                            "TEXT_ColorCode": "white",
+                                                            "Quantity": 1
+                                                        },
+                                                        {
+                                                            "AutoId": 52,
+                                                            "ProductName": "19 Crimes Pinot Noir - 750ML",
+                                                            "ViewImage": 1,
+                                                            "ImagePath": "http://localhost:56877/Images/ProductImages/1704747800000_4831a3c9d33724747a9378b44a55829f.jpg",
+                                                            "SKUCount": 3,
+                                                            "Age": 21,
+                                                            "Barcode": 0,
+                                                            "SKUAutoId": 0,
+                                                            "BG_ColorCode": "#29AB87",
+                                                            "TEXT_ColorCode": "white",
+                                                            "Quantity": 1
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetMultiPackingProduct">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Multi Packing Product</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetMultiPackingProduct</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                       {
+                                            "requestContainer": {
+                                                "AccessToken": "POSPriorware",
+                                                "AppVersion": "1.0.0.1",
+                                                "AutoId": 4,
+                                                "DeviceId": "ad09a8aaf5940d53",
+                                                "Hashkey": "POS#@2023Priorware",
+                                                "LatLong": "7854859,44784574",
+                                                "LoginId": "cashierCa",
+                                                "RequestSource": "IOS"
+                                            },
+                                            "requestData": {
+                                                "StoreId": "1",
+                                                "ProductId": "52"
+                                            }
+                                        }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "d": {
+                                            "responseMessage": "Success",
+                                            "responseCode": "200",
+                                            "responseData": [
+                                                {
+                                                    "ProductName": "19 Crimes Pinot Noir",
+                                                    "ProductDetails": [
+                                                        {
+                                                            "SKUAutoId": 52,
+                                                            "SKUName": "19 Crimes Pinot Noir-750ML",
+                                                            "Barcode": 52,
+                                                            "SKUTotal": 12.74,
+                                                            "PackingName": "12 Piece ₹11.99",
+                                                            "skutype": 1,
+                                                            "BG_ColorCode": "#28CC9E",
+                                                            "TEXT_ColorCode": "white",
+                                                            "Age": 21
+                                                        },
+                                                        {
+                                                            "SKUAutoId": 10489,
+                                                            "SKUName": "19 Crimes Pinot Noir-750ML",
+                                                            "Barcode": 10489,
+                                                            "SKUTotal": 7.43,
+                                                            "PackingName": "6 Piece ₹6.99",
+                                                            "skutype": 1,
+                                                            "BG_ColorCode": "#28CC9E",
+                                                            "TEXT_ColorCode": "white",
+                                                            "Age": 21
+                                                        },
+                                                        {
+                                                            "SKUAutoId": 10490,
+                                                            "SKUName": "19 Crimes Pinot Noir-750ML",
+                                                            "Barcode": 10490,
+                                                            "SKUTotal": 4.24,
+                                                            "PackingName": "3 Piece ₹3.99",
+                                                            "skutype": 1,
+                                                            "BG_ColorCode": "#28CC9E",
+                                                            "TEXT_ColorCode": "white",
+                                                            "Age": 21
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="AddProductToCart">
+                <div class="w3-button w3-block w3-black w3-left-align">Add Product To Cart</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/AddToCartAPI.asmx/AddProductToCart</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                        {
+                                            "requestContainer": {
+                                                "AccessToken": "POSPriorware",
+                                                "AppVersion": "1.0.0.1",
+                                                "AutoId": 4,
+                                                "DeviceId": "ad09a8aaf5940d53",
+                                                "Hashkey": "POS#@2023Priorware",
+                                                "LatLong": "7854859,44784574",
+                                                "LoginId": "cashierCa",
+                                                "RequestSource": "IOS"
+                                            },
+                                            "requestData": {
+                                                "StoreId": 1,
+                                                "TerminalId": 1,
+                                                "SKUAutoId": "10490",
+                                                "Quantity": "4",
+                                                "OrderId": "6",
+                                                "OrderNo": "ODR100006",
+                                                "SKUName":"Scheme 1",
+                                                "CustomerId":"1",
+                                                "Discount":"0",
+                                                "SKUAmt":"0",
+                                                "GiftCardCode":""
+                                            }
+                                        }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "d": {
+                                            "responseMessage": "Success",
+                                            "responseCode": "200",
+                                            "responseData": [
+                                                {
+                                                    "ProductList": [
+                                                        {
+                                                            "CartItemId": 10,
+                                                            "SKUId": 10490,
+                                                            "SKUName": "19 Crimes Pinot Noir-750ML",
+                                                            "SchemeId": 4,
+                                                            "Quantity": 7,
+                                                            "GiftCardCode": "",
+                                                            "ProductImagePath": "http://localhost:56877/Images/ProductImages/1704747800000_4831a3c9d33724747a9378b44a55829f.jpg",
+                                                            "UnitPrice": 2.99,
+                                                            "Tax": 0.190,
+                                                            "Total": 22.260
+                                                        }
+                                                    ],
+                                                    "OrderDetail": [
+                                                        {
+                                                            "OrderId": 6,
+                                                            "OrderNo": "ODR100006",
+                                                            "ItemCount": 1,
+                                                            "Subtotal": 20.93,
+                                                            "TotalTax": 1.33,
+                                                            "Discount": 0.00,
+                                                            "OrderTotal": 22.26
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetProductFromBarcode">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Product From Barcode</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetProductFromBarcode</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                        {
+                                            "requestContainer": {
+                                                "AccessToken": "POSPriorware",
+                                                "AppVersion": "1.0.0.1",
+                                                "AutoId": 4,
+                                                "DeviceId": "ad09a8aaf5940d53",
+                                                "Hashkey": "POS#@2023Priorware",
+                                                "LatLong": "7854859,44784574",
+                                                "LoginId": "cashierCa",
+                                                "RequestSource": "IOS"
+                                            },
+                                            "requestData": {
+                                                "StoreId": 1,       
+                                                "Barcode": "8520415",
+                                                "OrderNo": "",
+                                                "CustomerId": "1",
+                                                "TerminalId": 1
+                                            }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "d": {
+                                            "responseMessage": "Success",
+                                            "responseCode": "200",
+                                            "responseData": [
+                                                {
+                                                    "SKUCnt": 1,
+                                                    "ProductName": "",
+                                                    "CustomerDetail": [
+                                                        {
+                                                            "AutoId": "",
+                                                            "Name": ""
+                                                        }
+                                                    ],
+                                                    "ProductList": [
+                                                        {
+                                                            "CartItemId": 523,
+                                                            "SKUId": 10491,
+                                                            "SKUName": "Chill Pack//nLong Trail IPA-6Pack/6 Pieces",
+                                                            "SchemeId": 0,
+                                                            "Quantity": 1,
+                                                            "GiftCardCode": "",
+                                                            "ProductImagePath": "http://localhost:56877/Images/ProductImages/product.png",
+                                                            "UnitPrice": 9.99,
+                                                            "Tax": 0.000,
+                                                            "Total": 9.990
+                                                        }
+                                                    ],
+                                                    "OrderDetail": [
+                                                        {
+                                                            "OrderId": 268,
+                                                            "OrderNo": "ODR100268",
+                                                            "ItemCount": 1,
+                                                            "TotalQuantity": 1,
+                                                            "Subtotal": 9.99,
+                                                            "TotalTax": 0.00,
+                                                            "Discount": 0.00,
+                                                            "OrderTotal": 9.99
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetProductBySearch">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Product By Search</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetProductBySearch</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>{
+                                        "requestContainer": {
+                                            "AccessToken": "POSPriorware",
+                                            "AppVersion": "1.0.0.1",
+                                            "AutoId": 4,
+                                            "DeviceId": "ad09a8aaf5940d53",
+                                            "Hashkey": "POS#@2023Priorware",
+                                            "LatLong": "7854859,44784574",
+                                            "LoginId": "cashierCa",
+                                            "RequestSource": "IOS"
+                                        },
+                                        "requestData": {
+                                            "StoreId": "1",
+                                            "ProductName": "Sche"
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "d": {
+                                            "responseMessage": "Success",
+                                            "responseCode": "200",
+                                            "responseData": [
+                                                {
+                                                    "ScreenId": 0,
+                                                    "ScreenName": "Home Screen",
+                                                    "ProductList": [
+                                                        {
+                                                            "AutoId": 2731,
+                                                            "ProductName": "Cristina Ascheri Moscato - 750ML",
+                                                            "ViewImage": 1,
+                                                            "ImagePath": "",
+                                                            "SKUCount": 1,
+                                                            "Age": 18,
+                                                            "Barcode": 2731,
+                                                            "SKUAutoId": 2731,
+                                                            "BG_ColorCode": "#28CC9E",
+                                                            "TEXT_ColorCode": "white",
+                                                            "Quantity": 1
+                                                        },  
+                                                        {
+                                                            "AutoId": 6107,
+                                                            "ProductName": "Manischewitz  Cherry - 750ML",
+                                                            "ViewImage": 1,
+                                                            "ImagePath": "",
+                                                            "SKUCount": 1,
+                                                            "Age": 18,
+                                                            "Barcode": 6107,
+                                                            "SKUAutoId": 6107,
+                                                            "BG_ColorCode": "#28CC9E",
+                                                            "TEXT_ColorCode": "white",
+                                                            "Quantity": 1
+                                                        },
+                                                        {
+                                                            "AutoId": 6108,
+                                                            "ProductName": "Manischewitz  Concord Grape - 1.5L",
+                                                            "ViewImage": 1,
+                                                            "ImagePath": "",
+                                                            "SKUCount": 1,
+                                                            "Age": 18,
+                                                            "Barcode": 6108,
+                                                            "SKUAutoId": 6108,
+                                                            "BG_ColorCode": "#28CC9E",
+                                                            "TEXT_ColorCode": "white",
+                                                            "Quantity": 1
+                                                        },
+                                                        {
+                                                            "AutoId": 6113,
+                                                            "ProductName": "MANISCHEWITZ CREAM RED KOSHER PASSOVER - 3L",
+                                                            "ViewImage": 1,
+                                                            "ImagePath": "",
+                                                            "SKUCount": 1,
+                                                            "Age": 18,
+                                                            "Barcode": 6113,
+                                                            "SKUAutoId": 6113,
+                                                            "BG_ColorCode": "#28CC9E",
+                                                            "TEXT_ColorCode": "white",
+                                                            "Quantity": 1
+                                                        },
+                                                        {
+                                                            "AutoId": 6114,
+                                                            "ProductName": "MANISCHEWITZ CREAM RED KOSHER PASSOVER - 750ML",
+                                                            "ViewImage": 1,
+                                                            "ImagePath": "",
+                                                            "SKUCount": 1,
+                                                            "Age": 18,
+                                                            "Barcode": 6114,
+                                                            "SKUAutoId": 6114,
+                                                            "BG_ColorCode": "#28CC9E",
+                                                            "TEXT_ColorCode": "white",
+                                                            "Quantity": 1
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="AddCustomer">
+                <div class="w3-button w3-block w3-black w3-left-align">Add Customer</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/AddCustomer</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                      {
+                                        "requestContainer": {
+                                            "AccessToken": "POSPriorware",
+                                            "AppVersion": "1.0.0.1",
+                                            "AutoId": 4,
+                                            "DeviceId": "ad09a8aaf5940d53",
+                                            "Hashkey": "POS#@2023Priorware",
+                                            "LatLong": "7854859,44784574",
+                                            "LoginId": "cashierCa",
+                                            "RequestSource": "IOS"
+                                        },
+                                        "requestData": {
+                                            "StoreId": 1,       
+                                            "FirstName": "Manar",
+                                            "LastName": "Abhishek",
+                                            "DOB":"",
+                                            "MobileNo": "9451445775",
+                                            "EmailId": "abhishek@gmail.com",
+                                            "Address": "Lucknow",
+                                            "City": "LKO",
+                                            "State":"UP",
+                                            "ZipCode":"23562"
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                    {
+                                        "d": {
+                                            "responseMessage": "Mobile no. already exists!",
+                                            "responseCode": "301",
+                                            "responseData": null
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetCustomerList">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Customer List</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetCustomerList</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                      {
+                                        "requestContainer": {
+                                            "AccessToken": "POSPriorware",
+                                            "AppVersion": "1.0.0.1",
+                                            "AutoId": 4,
+                                            "DeviceId": "ad09a8aaf5940d53",
+                                            "Hashkey": "POS#@2023Priorware",
+                                            "LatLong": "7854859,44784574",
+                                            "LoginId": "cashierCa",
+                                            "RequestSource": "IOS"
+                                        },
+                                        "requestData": {
+                                            "StoreId": 1,       
+                                            "FirstName": "",
+                                            "CustomerIdV": "",
+                                            "MobileNo": "",
+                                            "EmailId": ""
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "d": {
+                                            "responseMessage": "Success",
+                                            "responseCode": "200",
+                                            "responseData": [
+                                                {
+                                                    "CustomerDetail": [
+                                                        {
+                                                            "AutoId": 94,
+                                                            "CustomerId": "C100036",
+                                                            "Name": "Manar Abhishek",
+                                                            "DOB": "06/01/1999",
+                                                            "MobileNo": "9451445775",
+                                                            "PhoneNo": "",
+                                                            "EmailId": "abhishek@gmail.com",
+                                                            "Address": "Lucknow",
+                                                            "State": "UP",
+                                                            "City": "LKO",
+                                                            "Country": "",
+                                                            "ZipCode": "23562",
+                                                            "Status": 1,
+                                                            "TotalPurchase": 0.000,
+                                                            "RoyaltyPoint": 0
+                                                        },
+                                                        {
+                                                            "AutoId": 105,
+                                                            "CustomerId": "C100047",
+                                                            "Name": "Manar Abhishek",
+                                                            "DOB": "01/01/1900",
+                                                            "MobileNo": "9756436543",
+                                                            "PhoneNo": "",
+                                                            "EmailId": "abhishek@gmail.com",
+                                                            "Address": "Lucknow",
+                                                            "State": "0",
+                                                            "City": "LKO",
+                                                            "Country": "",
+                                                            "ZipCode": "23562",
+                                                            "Status": 1,
+                                                            "TotalPurchase": 0.000,
+                                                            "RoyaltyPoint": 0
+                                                        },
+                                                        {
+                                                            "AutoId": 118,
+                                                            "CustomerId": "C100060",
+                                                            "Name": "Manar Abhishek",
+                                                            "DOB": "01/01/1900",
+                                                            "MobileNo": "9451445779",
+                                                            "PhoneNo": "",
+                                                            "EmailId": "abhishek@gmail.com",
+                                                            "Address": "Lucknow",
+                                                            "State": "UP",
+                                                            "City": "LKO",
+                                                            "Country": "",
+                                                            "ZipCode": "23562",
+                                                            "Status": 1,
+                                                            "TotalPurchase": 0.000,
+                                                            "RoyaltyPoint": 0
+                                                        },
+                                                        {
+                                                            "AutoId": 120,
+                                                            "CustomerId": "C100062",
+                                                            "Name": "Manar Abhishek",
+                                                            "DOB": "06/01/1999",
+                                                            "MobileNo": "5465465465",
+                                                            "PhoneNo": "",
+                                                            "EmailId": "abhishek@gmail.com",
+                                                            "Address": "Lucknow",
+                                                            "State": "UP",
+                                                            "City": "LKO",
+                                                            "Country": "",
+                                                            "ZipCode": "23562",
+                                                            "Status": 1,
+                                                            "TotalPurchase": 0.000,
+                                                            "RoyaltyPoint": 0
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="ClockInOut">
+                <div class="w3-button w3-block w3-black w3-left-align">Clock In/Out</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/ClockInOut</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                      {
+                                        "requestContainer": {
+                                            "AccessToken": "POSPriorware",
+                                            "AppVersion": "1.0.0.1",
+                                            "AutoId": 4,
+                                            "DeviceId": "ad09a8aaf5940d53",
+                                            "Hashkey": "POS#@2023Priorware",
+                                            "LatLong": "7854859,44784574",
+                                            "LoginId": "cashierCa",
+                                            "RequestSource": "IOS"
+                                        },
+                                        "requestData": {
+                                            "StoreId": 1,
+                                            "Remark": "Remark",
+                                            "DateTime": "2024-01-19 19:17:12.013",
+                                            "SearchString": "OUT"
+                                            //"SearchString": "IN"
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "d": {
+                                            "responseMessage": "Clocked Out.",
+                                            "responseCode": "200",
+                                            "responseData": null
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="AddGiftCard">
+                <div class="w3-button w3-block w3-black w3-left-align">Add Gift Card</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/AddGiftCard</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                      {
+                                        "d": {
+                                            "responseMessage": "Success",
+                                            "responseCode": "200",
+                                            "responseData": [
+                                                {
+                                                    "CustomerDetail": [
+                                                        {
+                                                            "AutoId": 94,
+                                                            "Name": "Manar Abhishek"
+                                                        }
+                                                    ],
+                                                    "ProductList": [
+                                                        {
+                                                            "AutoId": 316,
+                                                            "SKUId": 0,
+                                                            "SKUName": "Gift Card - 1451",
+                                                            "SchemeId": 0,
+                                                            "Quantity": 1,
+                                                            "ProductImagePath": "/Images/ProductImages/GiftCardImage.png",
+                                                            "Tax": 0.000,
+                                                            "Total": 25.000,
+                                                            "UnitPrice": 25.00
+                                                        }
+                                                    ],
+                                                    "OrderDetail": [
+                                                        {
+                                                            "OrderId": 269,
+                                                            "OrderNo": "ODR100269",
+                                                            "Discount": 0.00,
+                                                            "DiscType": "",
+                                                            "ItemCount": 1,
+                                                            "TotalQuantity": 1,
+                                                            "LotteryPayout": 0.000,
+                                                            "LotteryTotal": 0.000,
+                                                            "Subtotal": 25.00,
+                                                            "TotalTax": 0.000,
+                                                            "OrderTotal": 25.000
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                       "d":{
+                                       "responseMessage": "Success",
+                                       "responseCode": "200",
+                                       "responseData":[
+                                       {
+                                       "InvoiceDetail":[
+                                           {
+                                               "InvoiceNo": "100027",
+                                               "InvoiceDate": "09/16/2023 05:42 PM",
+                                               "PaymentMethod": "Cash",
+                                               "Tax": 2.59,
+                                               "CustomerName": "Walk In",
+                                               "Status": "Active",
+                                               "UpdateDate": "09/16/2023 05:42 PM",
+                                               "SubTotal": 58.10,
+                                               "SoldBy": "Ankit Srivastava",
+                                               "Discount": 0.00,
+                                               "Total": 60.69,
+                                               "Coupon": "",
+                                               "CouponAmt": 0.00,
+                                               "CompanyName": "Priorware",
+                                               "BillingAddress": "66 Middlesex Ave, Suite 205",
+                                               "Address2": "Iselin, NJ - 855554"
+                                           }
+                                       ],
+                                       "InvoiceItemList":[
+                                          {
+                                              "SKUName": "Ankit test product/test 1",
+                                              "SchemeName": "111",
+                                              "Price": 5.00,
+                                              "Quantity": 3,
+                                              "Tax": 0.99,
+                                              "Total": 15.99
+                                          },
+                                          {
+                                              "SKUName": "test1234/res",
+                                              "SchemeName": "",
+                                              "Price": 10.00,
+                                              "Quantity": 1,
+                                              "Tax": 0.00,
+                                              "Total": 10.00
+                                           }
+                                         ]
+                                        }
+                                       ]
+                                       }
+                                       }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="ApplyGiftCard">
+                <div class="w3-button w3-block w3-black w3-left-align">Apply Gift Card</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/ApplyGiftCard</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                   {
+                                        "requestContainer": {
+                                            "AccessToken": "POSPriorware",
+                                            "AppVersion": "1.0.0.1",
+                                            "AutoId": 4,
+                                            "DeviceId": "ad09a8aaf5940d53",
+                                            "Hashkey": "POS#@2023Priorware",
+                                            "LatLong": "7854859,44784574",
+                                            "LoginId": "cashierCa",
+                                            "RequestSource": "IOS"
+                                        },
+                                        "requestData": {
+                                            "StoreId": 1,
+                                            "GiftCardNo": "45345",
+                                            "CustomerId": "63"
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                     {
+                                        "d": {
+                                            "responseMessage": "No Gift Card found!",
+                                            "responseCode": "301",
+                                            "responseData": null
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetCouponDetails">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Coupon Details</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetCouponDetails</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                      {
+                                        "requestContainer": {
+                                            "AccessToken": "POSPriorware",
+                                            "AppVersion": "1.0.0.1",
+                                            "AutoId": 4,
+                                            "DeviceId": "ad09a8aaf5940d53",
+                                            "Hashkey": "POS#@2023Priorware",
+                                            "LatLong": "7854859,44784574",
+                                            "LoginId": "cashierCa",
+                                            "RequestSource": "IOS"
+                                        },
+                                        "requestData": {
+                                            "StoreId": 1,
+                                            "CouponCode": "123",
+                                            "TotalAmt": "63"
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                    {
+                                        "d": {
+                                            "responseMessage": "Invalid Coupon Code!",
+                                            "responseCode": "301",
+                                            "responseData": null
+                                        }
+                                    }
+                                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetCustomerDetails">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Customer Details</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetCustomerDetails</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                         {
+                            "requestContainer": {
+                                "AccessToken": "POSPriorware",
+                                "AppVersion": "1.0.0.1",
+                                "AutoId": 4,
+                                "DeviceId": "ad09a8aaf5940d53",
+                                "Hashkey": "POS#@2023Priorware",
+                                "LatLong": "7854859,44784574",
+                                "LoginId": "cashierPos",
+                                "RequestSource": "IOS"
+                            },
+                            "requestData": {
+                                "StoreId": "1",
+                                "CustomerId": "113"
+                            }
+                        }
+                    </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                {
+                                    "d": {
+                                        "responseMessage": "No Customer Found.",
+                                        "responseCode": "301",
+                                        "responseData": null
+                                    }
+                                }
+                    </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="ApplyDiscount">
+                <div class="w3-button w3-block w3-black w3-left-align">Apply Discount</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/AddToCartAPI.asmx/ApplyDiscount</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+             {
+                    "requestContainer": {
+                        "AccessToken": "POSPriorware",
+                        "AppVersion": "1.0.0.1",
+                        "AutoId": 4,
+                        "DeviceId": "ad09a8aaf5940d53",
+                        "Hashkey": "POS#@2023Priorware",
+                        "LatLong": "7854859,44784574",
+                        "LoginId": "cashierCa",
+                        "RequestSource": "IOS"
+                    },
+                    "requestData": {
+                        "StoreId": 1,
+                        "TerminalId": 1,
+                        "Discount": "10",
+                        "Type":"Per",    //"Type":"Fixed",
+                        "OrderId": "266",
+                        "OrderNo": "ODR100266"
+                    }
+                }
+        </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                             {
+                                "d": {
+                                    "responseMessage": "Success",
+                                    "responseCode": "200",
+                                    "responseData": [
+                                        {
+                                            "CustomerDetail": [
+                                                {
+                                                    "AutoId": 1,
+                                                    "Name": "Walk In "
+                                                }
+                                            ],
+                                            "ProductList": [
+                                                {
+                                                    "AutoId": 310,
+                                                    "SKUId": 1,
+                                                    "SKUName": "1000 STORIES ZINFANDEL 2020-750ML/12 Piece",
+                                                    "SchemeId": 0,
+                                                    "Quantity": 1,
+                                                    "ProductImagePath": "http://localhost:56877/Images/ProductImages/product.png",
+                                                    "Tax": 0.000,
+                                                    "Total": 17.990,
+                                                    "UnitPrice": 17.99
+                                                },
+                                                {
+                                                    "AutoId": 309,
+                                                    "SKUId": 0,
+                                                    "SKUName": "Gift Card - 1451",
+                                                    "SchemeId": 0,
+                                                    "Quantity": 1,
+                                                    "ProductImagePath": "http://localhost:56877/Images/ProductImages/GiftCardImage.png",
+                                                    "Tax": 0.000,
+                                                    "Total": 25.000,
+                                                    "UnitPrice": 25.00
+                                                }
+                                            ],
+                                            "OrderDetail": [
+                                                {
+                                                    "OrderId": 266,
+                                                    "OrderNo": "ODR100266",
+                                                    "Discount": 4.30,
+                                                    "DiscType": "Percentage",
+                                                    "ItemCount": 2,
+                                                    "TotalQuantity": 2,
+                                                    "LotteryPayout": 0.000,
+                                                    "LotteryTotal": 0.000,
+                                                    "Subtotal": 42.99,
+                                                    "TotalTax": 0.000,
+                                                    "OrderTotal": 38.690
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                                    </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetPayNowButtonList">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Pay Now Button List</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetPayNowButtonList</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                    {
+                                    "requestContainer": {
+                                        "AccessToken": "POSPriorware",
+                                        "Hashkey": "POS#@2023Priorware",
+                                        "DeviceId": "",
+                                        "LatLong": "7854859,44784574",
+                                        "AppVersion": "1.0.0.1",
+                                        "RequestSource": "IOS",
+                                        "LoginId": "cashierCa",
+                                        "AutoId": 4
+                                    },
+                                    "requestData": {
+                                        "StoreId": "1"
+                                    }
+                                }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                                {
+                                "d": {
+                                    "responseMessage": "Success",
+                                    "responseCode": "200",
+                                    "responseData": [
+                                        {
+                                            "Currency": [
+                                                {
+                                                    "AutoId": 18,
+                                                    "ButtonName": "1",
+                                                    "ButtonColor": "#ff996b",
+                                                    "SeqNo": 1,
+                                                    "Type": "Currency"
+                                                },
+                                                {
+                                                    "AutoId": 19,
+                                                    "ButtonName": "5",
+                                                    "ButtonColor": "#4cbb9f",
+                                                    "SeqNo": 2,
+                                                    "Type": "Currency"
+                                                },
+                                                {
+                                                    "AutoId": 20,
+                                                    "ButtonName": "10",
+                                                    "ButtonColor": "#92afa0",
+                                                    "SeqNo": 3,
+                                                    "Type": "Currency"
+                                                },
+                                                {
+                                                    "AutoId": 21,
+                                                    "ButtonName": "20",
+                                                    "ButtonColor": "#c98069",
+                                                    "SeqNo": 4,
+                                                    "Type": "Currency"
+                                                },
+                                                {
+                                                    "AutoId": 22,
+                                                    "ButtonName": "50",
+                                                    "ButtonColor": "#4c74bb",
+                                                    "SeqNo": 5,
+                                                    "Type": "Currency"
+                                                },
+                                                {
+                                                    "AutoId": 23,
+                                                    "ButtonName": "100",
+                                                    "ButtonColor": "#526f84",
+                                                    "SeqNo": 6,
+                                                    "Type": "Currency"
+                                                }
+                                            ],
+                                            "Pay": [
+                                                {
+                                                    "AutoId": 24,
+                                                    "ButtonName": "Custom Pay",
+                                                    "ButtonColor": "#c98069",
+                                                    "SeqNo": 1,
+                                                    "Type": "Pay"
+                                                },
+                                                {
+                                                    "AutoId": 25,
+                                                    "ButtonName": "",
+                                                    "ButtonColor": "#4c74bb",
+                                                    "SeqNo": 2,
+                                                    "Type": "Pay"
+                                                }
+                                            ],
+                                            "PayFrom": [
+                                                {
+                                                    "AutoId": 26,
+                                                    "ButtonName": "Coupon",
+                                                    "ButtonColor": "#4cbb9f",
+                                                    "SeqNo": 1,
+                                                    "Type": "PayFrom"
+                                                },
+                                                {
+                                                    "AutoId": 27,
+                                                    "ButtonName": "Gift Card",
+                                                    "ButtonColor": "#ff996b",
+                                                    "SeqNo": 2,
+                                                    "Type": "PayFrom"
+                                                },
+                                                {
+                                                    "AutoId": 28,
+                                                    "ButtonName": "Reward Points",
+                                                    "ButtonColor": "#92afa0",
+                                                    "SeqNo": 3,
+                                                    "Type": "PayFrom"
+                                                }
+                                            ],
+                                            "Footer": [
+                                                {
+                                                    "AutoId": 29,
+                                                    "ButtonName": "Go Back",
+                                                    "ButtonColor": "#ff0000",
+                                                    "SeqNo": 1,
+                                                    "Type": "Footer"
+                                                },
+                                                {
+                                                    "AutoId": 30,
+                                                    "ButtonName": "Credit Card",
+                                                    "ButtonColor": "#526f84",
+                                                    "SeqNo": 2,
+                                                    "Type": "Footer"
+                                                },
+                                                {
+                                                    "AutoId": 31,
+                                                    "ButtonName": "Proceed",
+                                                    "ButtonColor": "#4cbb9f",
+                                                    "SeqNo": 3,
+                                                    "Type": "Footer"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                            </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetCartDetails">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Cart Details</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/AddToCartAPI.asmx/GetCartDetails</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                       {
+                            "requestContainer": {
+                                "AccessToken": "POSPriorware",
+                                "AppVersion": "1.0.0.1",
+                                "AutoId": 4,
+                                "DeviceId": "ad09a8aaf5940d53",
+                                "Hashkey": "POS#@2023Priorware",
+                                "LatLong": "7854859,44784574",
+                                "LoginId": "cashierCa",
+                                "RequestSource": "IOS"
+                            },
+                            "requestData": {
+                                "StoreId": 1,
+                                "TerminalId": "1",
+                                "OrderNo": "ODR100266"
+                            }
+                        }
+                    </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                   {
+                                    "d": {
+                                        "responseMessage": "Order Details Not Found.",
+                                        "responseCode": "200",
+                                        "responseData": null
+                                    }
+                                }
+                </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetRewardPointDetails">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Reward Point Details</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetRewardPointDetails</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                   {
+                                        "requestContainer": {
+                                            "AccessToken": "POSPriorware",
+                                            "AppVersion": "1.0.0.1",
+                                            "AutoId": 4,
+                                            "DeviceId": "ad09a8aaf5940d53",
+                                            "Hashkey": "POS#@2023Priorware",
+                                            "LatLong": "7854859,44784574",
+                                            "LoginId": "cashierCa",
+                                            "RequestSource": "IOS"
+                                        },
+                                        "requestData": {
+                                            "StoreId": 1,
+                                            "CustomerId": "74"
+                                        }
+                                    }
+                              </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                    {
+                                    "d": {
+                                        "responseMessage": "Success",
+                                        "responseCode": "200",
+                                        "responseData": [
+                                            {
+                                                "CustomerRP": 10,
+                                                "CustomerRPDetail": [
+                                                    {
+                                                        "AutoId": 1,
+                                                        "AmtPerRoyaltyPoint": 1.00,
+                                                        "MinOrderAmt": 1.00
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                             </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetCreditCardList">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Credit Card List</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetCreditCardList</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                              {
+                                "requestContainer": {
+                                    "AccessToken": "POSPriorware",
+                                    "AppVersion": "1.0.0.1",
+                                    "AutoId": 4,
+                                    "DeviceId": "ad09a8aaf5940d53",
+                                    "Hashkey": "POS#@2023Priorware",
+                                    "LatLong": "7854859,44784574",
+                                    "LoginId": "cashierCa",
+                                    "RequestSource": "IOS"
+                                },
+                                "requestData": {
+                                    "StoreId": 1
+                                }
+                            }
+                  </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                   {
+                                    "d": {
+                                        "responseMessage": "Success",
+                                        "responseCode": "200",
+                                        "responseData": [
+                                            {
+                                                "CardTypeDetail": [
+                                                    {
+                                                        "AutoId": 1,
+                                                        "CardTypeName": "Amex Card",
+                                                        "textColor": "white",
+                                                        "BGColor": "#ffc42e",
+                                                        "CardNameAbbr": "Amex"
+                                                    },
+                                                    {
+                                                        "AutoId": 2,
+                                                        "CardTypeName": "Visa Card",
+                                                        "textColor": "white",
+                                                        "BGColor": "#ffc42e",
+                                                        "CardNameAbbr": "VI"
+                                                    },
+                                                    {
+                                                        "AutoId": 3,
+                                                        "CardTypeName": "Master Card",
+                                                        "textColor": "white",
+                                                        "BGColor": "#ffc42e",
+                                                        "CardNameAbbr": "MA"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                               </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="w3-padding-32" id="GetSecurityPin">
+                <div class="w3-button w3-block w3-black w3-left-align">Get Security Pin</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/GetSecurityPin</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                {
+                                "requestContainer": {
+                                "AccessToken": "POSPriorware",
+                                "AppVersion": "1.0.0.1",
+                                "AutoId": 4,
+                                "DeviceId": "ad09a8aaf5940d53",
+                                "Hashkey": "POS#@2023Priorware",
+                                "LatLong": "7854859,44784574",
+                                "LoginId": "cashierCa",
+                                "RequestSource": "IOS"
+                                },
+                                "requestData": {
+                                "StoreId": 1,
+                                "SearchString":"Discount"
+                                // "SearchString":"Withdraw"
+                                }
+                                }
+                                </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                  {
+                                    "d": {
+                                        "responseMessage": "Success",
+                                        "responseCode": "200",
+                                        "responseData": [
+                                            {
+                                                "CardTypeDetail": [
+                                                    {
+                                                        "SecurityPin": "123",
+                                                        "Status": 1,
+                                                        "type": "Discount"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                          </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+       
+            <div class="w3-padding-32" id="DraftOrder">
+                <div class="w3-button w3-block w3-black w3-left-align">Draft Order</div>
+                <div class="w3-container w3-padding-0">
+                    <table class="w3-table-all">
+                        <tr>
+                            <td style="width: 20%;"><b>End Point: </b></td>
+                            <td>Base Url/CashierActionPopUp.asmx/DraftOrder</td>
+                        </tr>
+                        <tr>
+                            <td><b>Method:</b></td>
+                            <td>POST</td>
+                        </tr>
+                        <tr>
+                            <td><b>Content-Type:</b></td>
+                            <td>application/json</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Request Format:</b>
+                            </td>
+                            <td>
+                                <pre>
+                                    {
+                                        "requestContainer": {
+                                            "AccessToken": "POSPriorware",
+                                            "AppVersion": "1.0.0.1",
+                                            "AutoId": 4,
+                                            "DeviceId": "ad09a8aaf5940d53",
+                                            "Hashkey": "POS#@2023Priorware",
+                                            "LatLong": "7854859,44784574",
+                                            "LoginId": "cashierCa",
+                                            "RequestSource": "IOS"
+                                        },
+                                        "requestData": {
+                                            "StoreId": 57,
+                                            "OrderNo":"ODR100281",
+                                            "CustomerId":"105",
+                                            "DraftName":"Draft 2"
+                                        }
+                                    }
+                    </pre>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Response Format: </b>
+                            </td>
+                            <td>
+                                <pre>
+                                  {
+                                    "d": {
+                                        "responseMessage": "Success",
+                                        "responseCode": "200",
+                                        "responseData": [
+                                            {
+                                                "DraftDetail": [
+                                                    {
+                                                        "DraftName": "Draft 2",
+                                                        "DraftDateTime": "02/05/2024",
+                                                        "OrderNo": "ODR100281",
+                                                        "OrderId": 281,
+                                                        "Type": "Draft By User",
+                                                        "UserName": "Adnan "
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                }
+                             </pre>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

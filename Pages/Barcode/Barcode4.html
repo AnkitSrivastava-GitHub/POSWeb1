@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../../Style/js/jquery-3.7.0.min.js"></script>
+   <script src="../../BarCode/jquery-barcode.js"></script>
+</head>
+<body>
+    <center>
+        <div class="content-body">
+            <div class="row">
+                <div class="col-md-12 form-group">
+                    <table><tbody class="addBarcode"></tbody></table>
+                    <!--<div class="col-md-2 form-group">
+                        <div id="divPrint" style="width:720px !important;margin-top:15px">
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </center>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (localStorage.getItem('BarcodeDetails') != null) {
+                generateBarcode();
+            }
+        });
+
+        function generateBarcode() {
+            debugger;
+            var itemList = JSON.parse(localStorage.getItem('BarcodeDetails'));
+            var html2 = '';
+            // Barcode type
+            let barcodeType = 'code128';
+            // Renederer type
+            let rendererType = 'css';
+
+            // Settings to generate barcode
+            let settings = {
+                output: rendererType,
+                bgColor: '#FFFFFF',
+                color: '#000000',
+                barWidth: '1.95',
+                barHeight: '60',
+                moduleSize: '5',
+                //posX: '15',
+                //posY: '30',
+
+                addQuietZone: '1'
+            };
+            var html2 = ""; var html = ""; var trcount = 0, trFlag = true;
+            $.each(itemList, function (index, item) {
+                var Qty = Number(item.Qty);
+                for (var i = 1; i <= Qty; i++) {
+                    if (++trcount % 5 == 1) {
+                        html2 += '<tr>';
+                        trFlag = true;
+                    }
+                    if (index == 0) {
+                        var id = "divPrint" + i + ""; var html = "";
+                    }
+                    else {
+                        var id = "divPrint" + index + i + ""; var html = "";
+                    }
+                    html += '<th id="' + id + '" style="margin-top:15px"></th>';
+                    html2 += html
+                    if (trcount % 5 == 0) {
+                        html2 += '</tr>';
+                        trFlag = false;
+                    }
+
+                }
+            });
+            $(".addBarcode").append(html2);
+            $.each(itemList, function (index, item) {
+                var Qty = Number(item.Qty);
+                let inputValue = item.Barcode;
+                //$("#divPrint").show();
+                for (var i = 1; i <= Qty; i++) {
+                    if (index == 0) {
+                        $("#divPrint" + i + "").barcode(inputValue, barcodeType, settings);
+                    }
+                    else {
+                        $("#divPrint" + index + i + "").barcode(inputValue, barcodeType, settings);
+                    }
+                }
+            });
+
+            window.print();
+
+        }
+    </script>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="../../BarCode/Barcodeforproduct.js"></script>
+   <script src="../../BarCode/jquery-barcode.js"></script>
+   <script src="../../BarCode/jquery-barcode.min.js"></script>
+</body>
+</html>

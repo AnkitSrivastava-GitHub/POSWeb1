@@ -1,0 +1,10 @@
+*****  Log Start  *****
+[9/12/2023 2:24:13 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcode","OrderNo":"ODR100009","CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":9,"CartItemId":0,"CustomerId":1,"Discount":0.0,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****
+*****  Log Start  *****
+[9/12/2023 2:25:43 PM]
+[API Method]	AddToCartAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":"123barcode","OrderNo":"","CoupanNo":null,"CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":null,"CategoryId":0,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":0,"CartItemId":0,"CustomerId":1,"Discount":0.0,"Quantity":1,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****

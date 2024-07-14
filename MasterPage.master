@@ -1,0 +1,1209 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="/logo.ico" />
+    <title>POSWeb</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="/Style/bootstrap/css/bootstrap.min.css?v=1" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <%-- <link href="/css/font-awesome.min.css" rel="stylesheet" />--%>
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/Style/dist/css/AdminLTE.min.css" />
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="/Style/dist/css/skins/_all-skins.css" />
+
+    <%-- <link href="/Style/css/loader.css" rel="stylesheet" />--%>
+    <%-- fas fa fa icons--%>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="/Style/plugins/iCheck/flat/blue.css" />
+    <!-- Morris chart -->
+    <link rel="stylesheet" href="/Style/plugins/morris/morris.css" />
+    <!-- jvectormap -->
+    <link rel="stylesheet" href="/Style/plugins/jvectormap/jquery-jvectormap-1.2.2.css" />
+    <!-- Date Picker -->
+    <%--<link rel="stylesheet" href="plugins/datepicker/datepicker3.css" />--%>
+    <!-- Daterange picker -->
+    <link href="/Style/customCSS/jquery-ui.css" rel="stylesheet" />
+    <%--<link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />--%>
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="/Style/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" />
+    <!-- DataTables -->
+    <link rel="stylesheet" href="/Style/plugins/datatables/dataTables.bootstrap.css" />
+    <link href="/Style/css/select2.min.css" rel="stylesheet" />
+    <link href="/Style/customCSS/Style.css?v=203" rel="stylesheet" />
+    <link href="/Style/customCSS/Loaders.css" rel="stylesheet" />
+    <script src="/Style/plugins/jQuery/jquery-2.2.3.min.js"></script>
+    <script src="/Style/js/select2.min.js"></script>
+    <script src="/Style/js/adminMenu.js?v=1" type="text/javascript"></script>
+    <script src="/Style/js/sweetalert.min.js"></script>
+    <link href="/Style/js/toastr.css" rel="stylesheet" />
+    <link href="/Style/css/toastr.css" rel="stylesheet" />
+    <script src="/Style/js/toastr.min.js"></script>
+
+    <script type="text/javascript" src="/Style/js/picker.js"></script>
+    <script type="text/javascript" src="/Style/js/picker.time.js"></script>
+    <script type="text/javascript" src="/Style/js/picker.date.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Style/css/pickadate.css" />
+    <link rel="stylesheet" type="text/css" href="/Style/css/daterangepicker.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/theme.min.css" integrity="sha512-hbs/7O+vqWZS49DulqH1n2lVtu63t3c3MTAn0oYMINS5aT8eIAbJGDXgLt6IxDHcWyzVTgf9XyzZ9iWyVQ7mCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js" integrity="sha512-BbVEDjbqdN3Eow8+empLMrJlxXRj5nEitiCAK5A1pUr66+jLVejo3PmjIaucRnjlB0P9R3rBUs3g5jXc8ti+fQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.min.js" integrity="sha512-iphNRh6dPbeuPGIrQbCdbBF/qcqadKWLa35YPVfMZMHBSI6PLJh1om2xCTWhpVpmUyb4IvVS9iYnnYMkleVXLA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style type="text/css">
+        @media (min-width: 768px) {
+            .modal-dialog {
+                width: 700px;
+            }
+        }
+
+        .CompleteDiv .form-control {
+            height: auto;
+        }
+
+        .CompleteDiv {
+            position: absolute;
+            z-index: 5004;
+            color: #fff;
+            background-color: #3526267a;
+            border-bottom: 1px solid #ddd;
+        }
+
+            .CompleteDiv .row .col-md-12 button:hover {
+                background-color: #3c8dbc !important;
+                color: #fff;
+            }
+
+        @media screen and (max-width: 480px) {
+            .CompleteDiv {
+                position: absolute;
+                z-index: 5004;
+                color: #fff;
+                background-color: #3526267a;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+
+        @media screen and (max-width: 1024px) and (min-width: 480px) {
+            .CompleteDiv {
+                position: absolute;
+                z-index: 5004;
+                color: #fff;
+                background-color: #3526267a;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+
+        @media screen and (max-width: 1344px) and (min-width: 1024px) {
+            .CompleteDiv {
+                position: absolute;
+                z-index: 5004;
+                color: #fff;
+                background-color: #3526267a;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+
+        hr {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .invoice-group .col-md-2 {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .invoice-group .col-md-4 {
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-top: 10px;
+        }
+
+
+
+        #loading {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.7;
+            background-color: #fff;
+            z-index: 99;
+        }
+
+        #loading-image {
+            z-index: 100;
+        }
+
+        /*body {
+            font-size: 18px !important;
+        }*/
+
+        .modal-lg, .modal-xl {
+            width: 900px;
+        }
+
+        .Change-Sotre {
+            font-size: 18px;
+            font-weight: 600;
+            background-color: transparent;
+            cursor: pointer;
+            color: white;
+        }
+
+            .Change-Sotre:hover {
+            }
+
+
+
+        .button {
+            display: inline-block;
+            border-radius: 12px;
+            /*  background-color: #f4511e;*/
+            background-color: transparent;
+            border: 2px solid white;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            /* padding: 20px;*/
+            width: 175px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 7px;
+            height: 40px;
+        }
+
+            .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+            }
+
+                .button span:after {
+                    content: '\00bb';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+
+            .button:hover span {
+                padding-right: 25px;
+            }
+
+                .button:hover span:after {
+                    opacity: 1;
+                    right: 0;
+                }
+
+        .button1:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .Com-Header {
+            color: white;
+            width: 90%;
+            text-align: center;
+            top: -10px;
+            position: absolute;
+            z-index: 0;
+            font-weight: 700;
+            font-size: 28px;
+        }
+
+        .dropdown-menu > li > a {
+            cursor: pointer;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#divForm').keypress(function (e) {
+                if (e.which == 13) {
+                    e.preventDefault();
+                    //do something   
+                }
+            });
+            var now = new Date();
+            var day = ("0" + now.getDate()).slice(-2);
+            var month = ("0" + (now.getMonth() + 1)).slice(-2);
+            var today = (month) + "/" + (day) + "/" + now.getFullYear();
+            // $("#txtTodayDate").val(today);
+
+            displayClock();
+            function displayClock() {
+                var display1 = new Date().toLocaleTimeString();
+                document.getElementById('txtTodayDate').value = today + ' ' + display1;
+                setTimeout(displayClock, 1000);
+            }
+        });
+        function MyAccount() {
+            window.location.href = '/Pages/MyAccount.aspx?PageId=' + $("#lblUserAutoId").val();
+        }
+
+        function ChangeStore() {
+            window.location.href = '/Pages/ChangeStore.aspx';
+        }
+
+
+
+
+
+        function BackfromClosingBalanceModal() {
+            $("#ModalOpenBalance").modal('hide');
+        }
+
+        function ClosingAmtPopUp() {
+            debugger
+            $('#txtBalance').val('0.00');
+            $.ajax({
+                type: "POST",
+                url: "/Pages/POS.asmx/CurrentUserType",
+                data: "",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    debugger
+                    if (response.d == '4') {
+                        swal({
+                            text: "Do you want to End Shift or Break.",
+                            icon: "warning",
+                            showCancelButton: true,
+                            closeOnClickOutside: false,
+                            buttons: {
+                                confirm: {
+                                    text: "End Shift",
+                                    value: true,
+                                    visible: true,
+                                    className: "btn-success",
+                                    closeModal: true,
+                                },
+                                cancel: {
+                                    text: "Break",
+                                    value: null,
+                                    visible: true,
+                                    className: "btn-danger",
+                                    closeModal: true,
+                                },
+                            }
+                        }).then(function (isConfirm) {
+                            if (isConfirm) {
+                                $("#ModalAction").modal("hide");
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/Pages/POS.asmx/BindCurrencyList",
+                                    data: "{ }",
+                                    contentType: "application/json; charset=utf-8",
+                                    dataType: "json",
+                                    async: false,
+                                    success: function (response) {
+                                        if (response.d == 'false') {
+                                            swal("", "No Currency Details Found!", "warning", { closeOnClickOutside: false });
+                                        } else if (response.d == "Session") {
+                                            swal("", "Session expired!", "warning", { closeOnClickOutside: false }).then(function () {
+                                                window.location.href = "/Default.aspx";
+                                            });
+                                        }
+                                        else {
+                                            debugger;
+                                            var xmldoc = $.parseXML(response.d);
+                                            var xml = $(xmldoc);
+                                            var CurrencyList = $(xml).find("Table");
+                                            var OpenBalList = $(xml).find("Table1");
+                                            var CurrentBalance = $(xml).find("Table6");
+
+                                            if (OpenBalList.length > 0) {
+                                                $.each(OpenBalList, function () {
+                                                    $('.OpenBalance').show();
+                                                    $('.ClosingDate').hide();
+                                                    $('#lbl_OpenBal').text('Previous Opening Balance:');
+                                                    $('#txtOpenBalance').val($(this).find("OpeningBalance").text());
+                                                });
+                                            }
+                                            else {
+                                                $('.OpenBalance').hide();
+                                                $('.ClosingDate').show();
+                                            }
+                                            if (CurrencyList.length > 0) {
+                                                $("#tableCurrency tbody tr").remove();
+                                                var row = $("#tableCurrency thead tr:first-child").clone(true);
+                                                $.each(CurrencyList, function () {
+                                                    debugger;
+                                                    $(".CCode", row).html($(this).find("AutoId").text());
+                                                    $(".Amount", row).html($(this).find("Amount").text()).css('text-align', 'right');
+                                                    $(".QTY", row).html('<div class="form-row" style="text-align:center;margin-left: -5px;"><button type="button" id="M" style="width: 110px; background-color:#d887347a;" class="minus-no btn btnMinus" onclick="MinusFun(this);CalCurrency(' + $(this).find("AutoId").text() + ',' + $(this).find("Amount").text() + ',this);" ><i class="fa fa-minus" aria-hidden="true"></i></button><input type="text" autocomplete="off" ondragover="return false" onPaste="return false" onCopy="return false" id="Q' + $(this).find("AutoId").text() + '" maxlength="3" onchange="CalCurrency2(' + $(this).find("AutoId").text() + ',' + $(this).find("Amount").text() + ',this);" onkeyup="CalCurrency2(' + $(this).find("AutoId").text() + ',' + $(this).find("Amount").text() + ',this);" onkeypress="return /[0-9]/i.test(event.key)" style="text-align: center; height: 37px;font-size:21px" class="form-control text-center" placeholder="0" /><button type="button" id="P" onclick="PlusFun(this);CalCurrency(' + $(this).find("AutoId").text() + ',' + $(this).find("Amount").text() + ',this);" style="width: 110px;background-color:#d887347a;" class="minus-no btn btnplus" ><i class="fa fa-plus" aria-hidden="true"></i></button></div>');
+                                                    $(".TotalA", row).html('<span id="T' + $(this).find("AutoId").text() + '">0.00</span>').css('text-align', 'right').css('background-color', '#eee');
+                                                    $("#tableCurrency").append(row);
+                                                    row = $("#tableCurrency tbody tr:last-child").clone(true);
+                                                });
+                                                $("#tableCurrency").show();
+                                            }
+                                            var ClosingBal = 0;
+                                            if (CurrentBalance.length > 0) {
+                                                ClosingBal = isNaN(parseFloat($('#txtBalance').val())) ? 0 : parseFloat($('#txtBalance').val());
+                                                $.each(CurrentBalance, function () {
+                                                    if (parseFloat($(this).find("CurrentCashAmt").text()) == ClosingBal) {
+                                                        $('#CurrentBaltxt').val('0.00');
+                                                        $('#CurrentBalStatus').val('exact');
+                                                        $('#CurrentBalanceText').text('Exact').css('color', 'black');
+                                                    }
+                                                    else {
+                                                        $('#CurrentBaltxt').val(parseFloat($(this).find("CurrentCashAmt").text()).toFixed(2));
+                                                        $('#CurrentBalStatus').val('short');
+                                                        $('#CurrentBalanceText').text('$' + parseFloat($(this).find("CurrentCashAmt").text()).toFixed(2) + ' is short.').css('color', 'crimson');
+                                                    }
+                                                    $('.CurrentBal').show();
+                                                    $('#txtCurrentBal').val($(this).find("CurrentCashAmt").text());
+                                                });
+                                            }
+                                        }
+                                    },
+                                    failure: function (result) {
+                                        console.log(result.d);
+                                    },
+                                    error: function (result) {
+                                        console.log(result.d);
+                                    }
+                                });
+                                $('#txtBalance').attr('disabled', true);
+                                $("#BalanceStatusHeader").html('Shift Closing Balance:');
+                                $("#balanceStatusText").text('Closing Balance:');
+                                $("#btnOpeningBack").hide();
+                                $("#btnOpeningProceed").hide();
+                                $("#btnClosingBack").show();
+                                $("#btnCloseBalanceProceed").show();
+                                $("#ModalOpenBalance").modal('show');
+                                $("#txtBalance").val('');
+                                //window.location.href = "/Default.aspx";
+                            }
+                            else {
+                                $.ajax({
+                                    type: "POST",
+                                    url: "/Pages/POS.asmx/BreakLog",
+                                    data: "{}",
+                                    contentType: "application/json; charset=utf-8",
+                                    dataType: "json",
+                                    success: function (response) {
+                                        if (response.d == 'false') {
+                                            swal("", "Some error occured!", "error", { closeOnClickOutside: false }).then(function () {
+                                            });
+                                        } else if (response.d == "Session") {
+                                            swal("", "Session expired!", "warning", { closeOnClickOutside: false }).then(function () {
+                                                window.location.href = "/Default.aspx";
+                                            });
+                                        }
+                                        else if (response.d == "failed") {
+                                            swal("", "Access Denied!", "error", { closeOnClickOutside: false }).then(function () {
+                                            });
+                                        }
+                                        else {
+                                            $("#ModalOpenBalance").modal('hide');
+                                            window.location.href = "/Default.aspx";
+                                        }
+                                    },
+                                    failure: function (result) {
+                                        console.log(result.d);
+                                    },
+                                    error: function (result) {
+                                        console.log(result.d);
+                                    }
+                                });
+                            }
+                        })
+                    }
+                    else {
+                        window.location.href = '/Pages/Blank.aspx'
+                    }
+                },
+                failure: function (result) {
+                    console.log(result.d);
+                },
+                error: function (result) {
+                    console.log(result.d);
+                }
+            });
+        }
+
+        function MinusFun(e) {
+            debugger
+            var id = $(e).next().attr("id");
+            var Num = $('#' + id + '').val();
+            if (Num == 0 || Num == '') {
+                $('#' + id + '').val(0);
+            }
+            else {
+                Num = Num - 1;
+                $('#' + id + '').val(Num);
+            }
+        }
+
+        function PlusFun(e) {
+            debugger
+            var id = $(e).prev().attr("id");
+            var Num = $('#' + id + '').val();
+            if (Num == '') {
+                $('#' + id + '').val(1);
+            }
+            else {
+                Num = parseInt(Num) + 1;
+                $('#' + id + '').val(Num);
+            }
+        }
+        function CalCurrency(AutoId, Amount, e) {
+            debugger
+            if ($(e).attr("id") == "M") {
+                var ID = $(e).next().attr("id");
+            }
+            else {
+                var ID = $(e).prev().attr("id");
+            }
+
+            if ($('#' + ID + '').val() == '') {
+                $('#T' + AutoId + '').text('0.00');
+            }
+            else {
+                var Qty = parseFloat($('#' + ID + '').val());
+                var Total = 0;
+                Total = parseFloat(Amount) * Qty;
+                $('#T' + AutoId + '').text(Total.toFixed(2));
+            }
+            TotalCurrency();
+        }
+
+        function CalCurrency2(AutoId, Amount, e) {
+            debugger
+
+            if ($(e).val() == '') {
+                $('#T' + AutoId + '').text('0.00');
+            }
+            else {
+                var Qty = parseFloat($(e).val());
+                var Total = 0;
+                Total = parseFloat(Amount) * Qty;
+                $('#T' + AutoId + '').text(Total.toFixed(2));
+            }
+            TotalCurrency();
+        }
+
+        function TotalCurrency() {
+            debugger
+            var TotalAmt = 0;
+            $('#tableCurrency tbody tr').each(function () {
+                var Total = $(this).find(".TotalA").text();
+                TotalAmt += parseFloat(Total);
+            });
+            var AmtCheck = 0;
+            $('#txtBalance').val(TotalAmt.toFixed(2));
+            if (TotalAmt < parseFloat($('#txtCurrentBal').val())) {
+                AmtCheck = parseFloat($('#txtCurrentBal').val()) - TotalAmt;
+                $('#CurrentBaltxt').val(AmtCheck);
+                $('#CurrentBalStatus').val('short');
+                $('#CurrentBalanceText').text('$' + AmtCheck.toFixed(2) + ' is short.').css('color', 'crimson');
+            }
+            else if (TotalAmt == parseFloat($('#txtCurrentBal').val())) {
+                $('#CurrentBaltxt').val('0.00');
+                $('#CurrentBalStatus').val('exact');
+                $('#CurrentBalanceText').text('Exact.').css('color', 'black');
+            }
+            else {
+                AmtCheck = parseFloat($('#txtCurrentBal').val()) - TotalAmt;
+                $('#CurrentBaltxt').val(AmtCheck);
+                $('#CurrentBalStatus').val('over');
+                $('#CurrentBalanceText').text('' + ('$' + parseFloat(AmtCheck).toFixed(2)).replace('$-', '$') + ' is over.').css('color', 'green');
+            }
+        }
+
+        function ProceedClosingBalanceModal() {
+            debugger
+            var validate = 1;
+            if ($("#txtBalance").val().trim() == '' || parseFloat($("#txtBalance").val().trim()) == 0) {
+                validate = 0;
+                toastr.error('Please Fill ' + $('#balanceStatusText').text().replace(':', '') + '.', 'Warning', { positionClass: 'toast-top-center', containerId: 'toast-top-center' });
+                $("#txtBalance").focus();
+                return false;
+            }
+            var j = 0;
+            if (validate == 1) {
+                Currencydatatable = new Array();
+                $("#tableCurrency tbody tr").each(function (index, item) {
+                    debugger
+                    Currencydatatable[j] = new Object();
+                    Currencydatatable[j].CurrencyID = $(item).find('.CCode').text();
+                    var QT = $(item).find('.QTY input').val();
+                    if (QT == '') {
+                        Currencydatatable[j].QTY = '0';
+                    } else {
+                        Currencydatatable[j].QTY = QT;
+                    }
+                    j++;
+                });//"{'ClosingBalance':'" + $("#txtBalance").val().trim() + "',
+                data = {
+                    ClosingBalance: $("#txtBalance").val().trim(),
+                    CurrentBalStatus: $("#CurrentBalStatus").val().trim(),
+                    CurrentBalance: (parseFloat($("#CurrentBaltxt").val()).toFixed(2)).replace('-', '')
+                }
+                $.ajax({
+                    type: "POST",
+                    url: "/Pages/POS.asmx/ClosingBalance",
+                    data: JSON.stringify({ dataValues: JSON.stringify(data), Currencydatatable: JSON.stringify(Currencydatatable) }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    async: false,
+                    success: function (response) {
+
+                        if (response.d == 'true') {
+                            $("#ModalOpenBalance").modal('hide');
+                            swal('', 'Shift ended successfully!', 'success', { closeOnClickOutside: false }).then(function () {
+                                window.location.href = "/Default.aspx";
+                            });
+                        }
+                        else if (response.d == "Session") {
+                            swal('', 'Session Expired!', 'success', { closeOnClickOutside: false }).then(function () {
+                                window.location.href = "/Default.aspx";
+                            });
+                        }
+                        else {
+                            swal('', response.d, 'warning', { closeOnClickOutside: false });
+                        }
+                    },
+                    failure: function (result) {
+                        console.log(result.d);
+                    },
+                    error: function (result) {
+                        console.log(result.d);
+                    }
+                });
+            }
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <form id="form1" runat="server">
+        <div id="fade">
+        </div>
+        <input type="hidden" id="lblUserAutoId" runat="server" />
+        <div class="wrapper">
+            <header class="main-header">
+                <div class="logo" style="text-align: left; min-height: 55px; background-color: transparent;">
+                    <strong><a href="/Pages/DashBoard.aspx" style="color: white; font-size: 30px">Priorware</a></strong>
+                </div>
+                <nav class="navbar navbar-static-top">
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" style="z-index: 99999; position: sticky;">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+
+                    <div class="navbar-custom-menu" style="z-index: 99999; position: sticky;">
+
+                        <ul class="nav navbar-nav">
+                            <li></li>
+                            <li runat="server" id="lblChangeStore">
+                                <button type="button" class="button badge button1" onclick="ChangeStore()" style="vertical-align: middle"><span>Change Store </span></button>
+                            </li>
+
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="/Style/img/default_user_icon.jpg" class="user-image" alt="User Image">
+                                    <span class="hidden-xs" runat="server" id="lblUserName"></span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <h3><span class="hidden-xs" runat="server" style="margin-left: 20px;" id="lblUserType"></span></h3>
+                                    </li>
+                                    <li class="treeview MyAcc" onclick=""><a onclick="MyAccount()"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;My Account</a></li>
+                                    <li class="treeview CS" onclick=""><a href="/Pages/ChangePassword.aspx"><span class="glyphicon glyphicon-edit"></span>&nbsp;&nbsp;Change Password</a></li>
+                                    <li class="treeview CS" onclick="ClosingAmtPopUp()"><a id="lnkLogout" runat="server" style="color: red;"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <h3 class="Com-Header" runat="server" id="lblCompanyName"></h3>
+                </nav>
+            </header>
+            <aside class="main-sidebar">
+                <section class="sidebar">
+                    <ul class="sidebar-menu">
+                        <li class="header">MAIN NAVIGATION</li>
+                        <li id="liDashboard" runat="server" visible="false"><a href="/Pages/DashBoard.aspx"><i class="fa fa-pie-chart">&nbsp;&nbsp;</i><span>Dashboard</span></a></li>
+                        <li id="liCashier" runat="server" visible="false"><a href="/Pages/POSScreen.aspx"><i class="fa fa-plus-circle"></i>&nbsp;<span>Cashier</span></a></li>
+                        <li id="liPayoutMaster" runat="server" visible="false"><a href="/Pages/PayoutMaster.aspx"><i class="fas fa-hand-holding-usd"></i>&nbsp;&nbsp;<span>Payout Master</span></a></li>
+                        <li id="liSafeCash" runat="server" visible="false"><a href="/Pages/SafeCash.aspx">
+                            <img style="border-radius: 0px; height: 18px; width: 18px" src="/Images/locker3.png" />&nbsp;&nbsp;<span>Safe Cash</span></a></li>
+                        <li id="liSaleInvoiceList" runat="server" visible="false"><a href="/Pages/SaleInvoiceList.aspx"><i class="fas fa-receipt"></i>&nbsp;&nbsp;<span>Sale Invoice List</span></a></li>
+
+
+                        <li class="treeview STMenu" id="liInventryMaster" runat="server">
+                            <a href="#">
+                                <i class="fa fa-edit"></i>
+                                <span style="width: 230px">Inventory Master</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu" style="width: 229px;">
+                                <li class="ST" id="liDepartmentMaster" runat="server" visble="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/DepartmentMaster.aspx"><i class="fa fa-street-view"></i><span>Department Master</span></a></li>
+                                <li class="ST" id="liBrandMaster" runat="server" visble="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/BrandMaster.aspx"><i class="fa fa-street-view"></i><span>Brand Master</span></a></li>
+                                <li class="ST" id="liCategoryMaster" runat="server" visble="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/CategoryMaster.aspx"><i class="fa fa-street-view"></i><span>Category Master</span></a></li>
+                                <li class="ST" id="liProductMaster" runat="server" visble="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/ProductList.aspx"><i class="fa fa-street-view"></i><span>Product Master</span></a></li>
+                                <li class="ST" id="liSKUMaster" runat="server" visble="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/SKUList.aspx"><i class="fa fa-street-view"></i><span>SKU Master</span></a></li>
+                                <li class="ST" id="liSchemeMaster" runat="server" visble="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/SchemeList.aspx"><i class="fa fa-street-view"></i><span>Scheme Master</span></a></li>
+                                <li class="ST" id="liMixNMatchMaster" runat="server" visble="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/MixNMatchList.aspx"><i class="fa fa-street-view"></i><span>Product Group Master</span></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="treeview PTMenu" id="liPurchaseMaster" runat="server">
+                            <a href="#">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span style="width: 230px">Purchase Master</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu" style="width: 229px;">
+                                <li class="PT" id="liPOList" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/POList.aspx"><i class="fa fa-mercury"></i><span>PO List</span></a></li>
+                                <li class="PT" id="liPurchaseInvoiceList" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/InvoiceList.aspx"><i class="fa fa-archive"></i><span>Purchase Invoice List</span></a></li>
+                                <li class="PT" id="liPurchaseHistory" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/CurrentStockMaster.aspx"><i class="fa fa-archive"></i><span>Purchase History</span></a></li>
+                                <li class="PT" id="liVendorMaster" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/ShowVendorMaster.aspx"><i class="fa fa-street-view"></i><span>Vendor Master</span></a></li>
+                            </ul>
+                        </li>
+
+                        <li class="treeview MSMenu" id="liSettingMaster" runat="server">
+                            <a href="#">
+                                <i class="fa fa-bars"></i>
+                                <span style="width: 230px">Setting Master</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu" style="width: 229px;">
+                                <li class="MS" id="liAgeRestrictionMaster" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/AgeRestrictionMaster.aspx"><i class="fa fa-gratipay"></i><span>Age Restriction Master</span></a></li>
+                                <li class="MS" id="liCouponMaster" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/ShowCouponMaster.aspx"><i class="fa fa-gratipay"></i><span>Coupon Master</span></a></li>
+                                <li class="MS" id="liExpenseMaster" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/ExpenseMaster.aspx"><i class="fa fa-gratipay"></i><span>Expense Master</span></a></li>
+                                <li class="MS" id="liGiftCardMaster" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/GiftCardReport.aspx"><i class="fa fa-gratipay"></i><span>Gift Card Master</span></a></li>
+                                <li class="MS" id="liInvoicePrintDetails" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/InvoicePrintDetails.aspx"><i class="fa fa-gratipay"></i><span>Invoice Print Details</span></a></li>
+                                <li class="MS" id="liRoyaltyMaster" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/RoyaltyMaster.aspx"><i class="fa fa-gratipay"></i><span>Reward Master</span></a></li>
+                                <li class="MS" id="liTaxMaster" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/TaxMaster.aspx"><i class="fa fa-gratipay"></i><span>Tax Master</span></a></li>
+                                <li class="MS" id="liModuleMaster" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/ModuleMaster.aspx"><i class="fa fa-gratipay"></i><span>Module Master</span></a></li>
+                                <li class="MS" id="liSubModuleMaster" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/SubModule.aspx"><i class="fa fa-gratipay"></i><span>Sub Module Master</span></a></li>
+                                <li class="MS" id="liComponentMaster" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/ComponentMaster.aspx"><i class="fa fa-gratipay"></i><span>Component Master</span></a></li>
+                                <li class="MS" id="liPrintBarcode" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/PrintBarcode.aspx"><i class="fa fa-gratipay"></i><span>Print Barcode</span></a></li>
+
+
+
+                            </ul>
+                        </li>
+                        <li class="treeview MSMenu" id="liAppSetting" runat="server">
+                            <a href="#">
+                                <i class="fa fa-bars"></i>
+                                <span style="width: 230px">App Setting</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu" style="width: 229px;">
+                                <li class="MS" id="liStoreMaster" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/StoreList.aspx"><i class="fa fa-gratipay"></i><span>Store Master</span></a></li>
+                                <li class="MS" id="liTerminalMaster" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/TerminalMaster.aspx"><i class="fa fa-gratipay"></i><span>Terminal Master</span></a></li>
+                                <li class="MS" id="liUserMaster" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 224px;"><a href="/Pages/ShowUserMaster.aspx"><i class="fa fa-gratipay"></i><span>User Master</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview MSMenu" id="liReportManagement" runat="server">
+                            <a href="#">
+                                <i class="fa fa-edit"></i>
+                                <span style="width: 230px">Report Management</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                            <ul class="treeview-menu" style="width: 230px;">
+                                <li class="MS" id="liCategorySalesReport" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 230px;"><a href="/Pages/CategorySalesReport.aspx"><i class="fa fa-archive"></i><span>Category Sales Report</span></a></li>
+                                <li class="MS" id="liClockInOutReport" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 230px;"><a href="/Pages/ClockInOutReport.aspx"><i class="fa fa-archive"></i><span>Clock In/Out Report</span></a></li>
+                                <li class="MS" id="liExpenseReport" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 230px;"><a href="/Pages/ExpenseReport.aspx"><i class="fa fa-archive"></i><span>Expense Report</span></a></li>
+                                <li class="MS" id="liHourlyRateReport" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 230px;"><a href="/Pages/HourlyRateReport.aspx"><i class="fa fa-archive"></i><span>Hourly Rate Report</span></a></li>
+                                <li class="MS" id="liLoginReport" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 230px;"><a href="/Pages/LogInLogDetail.aspx"><i class="fa fa-archive"></i><span>Login Report</span></a></li>
+                                <li class="MS" id="liNoSaleReport" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 230px;"><a href="/Pages/NoSaleList.aspx"><i class="fa fa-archive"></i><span>No Sale Report</span></a></li>
+                                <li class="MS" id="liStoreLoginReport" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 230px;"><a href="/Pages/StoreLoginLogReport.aspx"><i class="fa fa-archive"></i><span>Store Login Report</span></a></li>
+                                <li class="MS" id="liTerminalLoginReport" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 230px;"><a href="/Pages/TerminalLoginReport.aspx"><i class="fa fa-archive"></i><span>Terminal Login Report</span></a></li>
+                                <li class="MS" id="liLiveCart" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 230px;"><a href="/Pages/LiveCart.aspx"><i class="fa fa-archive"></i><span>View Live Cart</span></a></li>
+                                <li class="MS" id="liZReport" runat="server" visible="false" onclick="ActiveClass(this)" style="width: 230px;"><a href="/Pages/Z_Report.aspx"><i class="fa fa-archive"></i><span>Z Report</span></a></li>
+
+
+
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+            <div class="content-wrapper">
+                <div id="loading">
+                    <img id="loading-image" src="/Style/img/spinner.gif" alt="Loading..." />
+                </div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <script>
+                    $(window).load(function () {
+                        $('#loading').hide();
+                    });
+                </script>
+            </div>
+            <footer class="main-footer">
+                <strong>Design & Developed by <a href="http://www.priorware.com/" target="_blank"><span style="color: orange">Priorware Solutions LLC</span></a>.</strong> All rights reserved.
+            </footer>
+            <div class="control-sidebar-bg"></div>
+        </div>
+
+
+        <div class="modal fade" id="GenerateInvoice" role="dialog" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog  modal-md">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding: 1px;">
+                        <div class="row modal-title">
+                            <div class="col-md-4" id="spnCompany" style="font-size: 26px; font-weight: 600;"></div>
+                            <div class="col-md-4" id="spnTimer" style="font-size: 26px; font-weight: 600; text-align: center"></div>
+                            <div class="col-md-4" style="text-align: right">
+                                <button type="button" id="btnCancel" class="btn btn-sm btn-default popupinvoicebuttoncancel" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body" style="padding: 10px">
+                        <input type="hidden" id="txtHOrderAutoId" class="form-control input-sm" />
+                        <input type="hidden" id="DraftAutoId" value="0" class="form-control input-sm" />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-4 item-list-col">
+                                        <div class="row">
+                                            <div class="col-md-12 form-group" style="margin-bottom: 0px">
+                                                <input type="text" class="form-control input-sm" aria-autocomplete="none" autocomplete="off" id="txtBarcode" runat="server" onfocus="this.select()" placeholder="Enter Barcode here" autofocus="autofocus" onchange="readBarcode()" />
+                                            </div>
+                                        </div>
+                                        <div class="row scrollbar" id="style-3">
+                                            <div class="col-md-12 force-overflow">
+                                                <div class="row product-addlist" style="padding-top: 15px;">
+                                                    <div class="col-md-3">
+                                                        <div>
+                                                            <img src="../Images/11.png" class="product-img" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div>
+                                                                <img src="../Images/del.png" class="del-img" />
+                                                                <h6>120 Pieces Coco Nara Natural Coconut Hookah Charcoal/120Pcs</h6>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-md-6" style="padding: 0;">
+                                                                <p>$90.55 <span>Tax: 10.2%</span></p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <div>
+                                                                    <div class="form-row">
+                                                                        <button class="minus-no btn">
+                                                                            <i class="fa fa-minus" aria-hidden="true"></i>
+                                                                        </button>
+                                                                        <input type="text" class="form-control w-25 mx-2 quantity input-no text-center" unitprice="109.95" value="1" min="1" style="width: 49px;">
+                                                                        <button class="minus-no btn">
+                                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <hr />
+                                            </div>
+                                        </div>
+                                        <div class="row" style="display: none">
+                                            <div class="col-md-12">
+                                                <div class="table-responsive tableFixHead">
+                                                    <table id="tblProductDetail" class="table table-striped table-bordered well" style="margin-bottom: 5px; margin-top: 5px">
+                                                        <thead>
+                                                            <tr class="thead">
+                                                                <td class="Action text-center" title="Delete" style="width: 4%;">Action</td>
+                                                                <td class="SchemeId text-center" style="display: none;">SchemeId</td>
+                                                                <td class="SKUId text-center" style="display: none;">SKUId</td>
+                                                                <td class="ProName">Product Name </td>
+                                                                <td class="Quantity text-center" style="width: 10%;">Quantity</td>
+                                                                <td class="UnitPrice text-center" style="width: 12%;">Unit Price<br />
+                                                                    ($)</td>
+                                                                <td class="Discount text-center" style="width: 10%;">Discount<br />
+                                                                    ($)</td>
+                                                                <td class="Tax text-center" style="width: 10%;">Tax<br />
+                                                                    ($)</td>
+                                                                <td class="Amount text-center" style="width: 10%;">Amount<br />
+                                                                    ($)</td>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tblProductDetailBody" style="max-height: 400px !important; scroll-behavior: auto; overflow: scroll;">
+                                                        </tbody>
+                                                    </table>
+                                                    <h5 class="well text-center" id="emptyTable">No Product Selected.</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <hr />
+                                            <div class="col-md-6">
+                                                <div class="row  form-group ">
+                                                    <label class="col-md-4">
+                                                        Sub Total
+                                                    </label>
+                                                    <div class="col-md-8">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon input-sm inputsmgenerateinvoive currencycompany">$</span>
+                                                            <input type="text" class="form-control input-sm border-primary" style="text-align: right" id="SubTotal" value="0.000" readonly="readonly" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label class="col-md-4">
+                                                        Tax 
+                                                    </label>
+                                                    <div class="col-md-8">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon input-sm inputsmgenerateinvoive currencycompany">$</span>
+                                                            <input type="text" class="form-control input-sm border-primary" style="text-align: right;" onfocus="this.select()" id="Tax" readonly="readonly" value="0.000" onkeypress="return isNumberDecimalKey(event,this)" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="row form-group">
+                                                    <label class="col-md-4">
+                                                        Discount 
+                                                    </label>
+                                                    <div class="col-md-8">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon input-sm inputsmgenerateinvoive currencycompany">$</span>
+                                                            <input type="text" class="form-control input-sm border-primary" style="text-align: right;" onfocus="this.select()" id="txtDiscount" readonly="readonly" value="0.000" onkeypress="return isNumberDecimalKey(event,this)" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label class="col-md-4">
+                                                        Grand Total
+                                                    </label>
+                                                    <div class="col-md-8">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon input-sm inputsmgenerateinvoive currencycompany">$</span>
+                                                            <input type="text" class="form-control input-sm border-primary" style="text-align: right" id="GrandTotal" value="0.000" readonly="readonly" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <hr />
+                                            <div class="col-md-12">
+                                                <div class="row invoice-group" style="padding-left: 10px; padding-right: 10px;">
+                                                    <div class="col-md-2">
+                                                        <button type="button" onclick="" class="currecy-btn btn btn-primary">$1</button>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <button type="button" onclick="" class="currecy-btn btn btn-primary">$5</button>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <button type="button" onclick="" class="currecy-btn btn btn-primary">$10</button>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <button type="button" onclick="" class="currecy-btn btn btn-primary">$20</button>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <button type="button" onclick="" class="currecy-btn btn btn-primary">$50</button>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <button type="button" onclick="" class="currecy-btn btn btn-primary">$100</button>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <button type="button" onclick="" class="exact-btn btn btn-primary">Exact</button>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <button type="button" onclick="" class="cash-btn btn btn-primary" style="width: 100%; height: 40px; font-size: 19px">Cash</button>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <button type="button" onclick="" class="card-btn btn btn-primary" style="width: 100%; height: 40px; font-size: 19px">Card</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <%--<div class="panel-body">--%>
+                                        <div class="row form-group" style="display: none">
+                                            <div class="col-md-3 form-group" style="margin-bottom: 0px">
+                                                <label class="labelgenaretinvoice">
+                                                    Order No                    
+                                                </label>
+                                                <input type="text" class="form-control input-sm border-primary" id="txtOrderId" readonly="readonly" />
+                                            </div>
+                                            <div class="col-md-3 form-group" style="margin-bottom: 0px">
+                                                <label class="labelgenaretinvoice">
+                                                    Invoice Date 
+                                                </label>
+                                                <input type="text" class="form-control input-sm border-primary" style="" id="txtOrderDate" readonly="readonly" />
+                                            </div>
+                                            <div class="col-md-6 form-group" style="margin-bottom: 0px">
+                                                <label class="labelgenaretinvoice">
+                                                    Customer Name  
+                                                </label>
+                                                <input type="hidden" id="hdnCustomerId" />
+                                                <input type="text" class="form-control input-sm" id="ddlCustomer" style="width: 100% !important;" runat="server" readonly="readonly">
+                                            </div>
+                                        </div>
+                                        <div class="row form-group">
+                                            <div class="col-md-12">
+                                                <input type="text" id="txtSearchProduct" onkeyup="BindProductList()" class="form-control input-sm" runat="server" onfocus="this.select()" placeholder="Enter Product Name" autofocus="autofocus" />
+                                            </div>
+                                        </div>
+                                        <div class="row" style="max-height: 650px !important; scroll-behavior: auto; overflow: scroll; overflow-x: hidden;">
+                                            <div class="col-md-12 form-group">
+                                                <div id="ProductList">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <button type="button" onclick="openCal();" class="disc-btn btn btn-primary">Discount</button>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <button type="button" onclick="OpenDraftLogModal();" class="disc-btn btn btn-primary">Draft Log</button>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <button type="button" onclick="OpenDraftModal();" class="disc-btn btn btn-primary">Draft Order</button>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <button type="button" onclick="" class="disc-btn btn btn-primary">No Sale</button>
+                                            </div>
+
+                                            <div class="col-md-2">
+                                                <button type="button" onclick="NewOrder();" class="button-new btn btn-primary">New</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="ModalOpenBalance" role="dialog" data-backdrop="static" data-keyboard="false" style="overflow-y: scroll; overflow-x: hidden;">
+            <div class="modal-dialog modal-dialog-centered" role="document" style="width: 600px !important">
+                <div class="modal-content card-p">
+                    <div class="modal-header cardm-head">
+                        <h5 class="modal-title" id="BalanceStatusHeader">
+                            <%--<img src="../Images/del.png" class="del-btnp" onclick="CloseModalInvoiceItemList()" />--%>
+                        </h5>
+                    </div>
+                    <input type="hidden" id="BalanceStatus" />
+                    <div class="modal-body" style="padding: 0px; margin-top: 15px">
+                        <div class="row form-group">
+                            <div class="col-md-5">
+                                <label>Date & Time:</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input type="text" id="txtTodayDate" disabled="disabled" class="form-control input-sm" readonly="readonly" />
+                            </div>
+                        </div>
+                        <%-- <div class="row form-group">
+                    <div class="col-md-5">
+                        <label>Time:</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" id="txtCurrentTime" class="form-control input-sm" readonly="readonly" />
+                    </div>
+                </div>--%>
+                        <div class="row form-group ClosingDate" style="display: none">
+                            <div class="col-md-5">
+                                <label>Closing Date:</label>
+                            </div>
+                            <div class="col-md-7">
+                                <input type="text" id="txtClosingDate" class="form-control input-sm" readonly="readonly" />
+                            </div>
+                        </div>
+                        <div class="row form-group OpenBalance" style="display: none">
+                            <div class="col-md-5">
+                                <label id="lbl_OpenBal" style="white-space: nowrap;">Opening Balance:</label>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="input-group">
+                                    <span class="input-group-addon input-md"><b>$</b></span>
+                                    <input type="text" id="txtOpenBalance" style="text-align: right" class="form-control input-sm" disabled="disabled" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-5">
+                                <label id="balanceStatusText"></label>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="input-group">
+                                    <span class="input-group-addon input-md"><b>$</b></span>
+                                    <input type="text" id="txtBalance" onkeypress="return isNumberDecimalKey(event,this)" style="text-align: right" class="form-control input-sm" placeholder="0.00" />
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" runat="server" id="txtCurrentBal" value="0.00" />
+                        <input type="hidden" runat="server" id="CurrentBalStatus" value="" />
+                        <input type="hidden" runat="server" id="CurrentBaltxt" value="0.00" />
+                        <div class="row form-group CurrentBal" style="display: none">
+                            <div class="col-md-12 text-center">
+                                <label id="CurrentBalanceText">Exact</label>
+                            </div>
+                        </div>
+
+                        <hr style="margin-top: 4px; margin-bottom: 10px;" />
+                        <div class="row form-group">
+                            <style>
+                                #btnClosingBack, #btnCloseBalanceProceed {
+                                    height: 40px;
+                                    font-size: 18px;
+                                    width: 120px;
+                                    font-weight: 700;
+                                }
+
+                                #CurrentBalanceText {
+                                    padding: 10px;
+                                    margin-bottom: -10px;
+                                    font-size: 22px;
+                                }
+
+                                #tableCurrency {
+                                    border: 1px solid Black;
+                                    border-collapse: collapse;
+                                    text-align: center;
+                                }
+
+                                    #tableCurrency tr {
+                                        border: 1px solid Black;
+                                        border-collapse: collapse;
+                                        text-align: center;
+                                    }
+
+                                        #tableCurrency tr th {
+                                            border: 1px solid Black;
+                                            border-collapse: collapse;
+                                            text-align: center;
+                                            padding-left: 5px;
+                                            padding-right: 5px;
+                                            font-size: 20px
+                                        }
+
+                                .btnMinus {
+                                    width: 110px;
+                                    height: 37px;
+                                    border: 1px solid black;
+                                }
+
+                                .btnplus {
+                                    width: 110px;
+                                    height: 37px;
+                                    border: 1px solid black;
+                                }
+
+                                #txtQTY {
+                                    background-color: antiquewhite;
+                                }
+                            </style>
+                            <div class="col-md-12" style="overflow-x: auto;">
+                                <table id="tableCurrency" style="width: 100%;">
+                                    <thead style="background-color: #96D4D4;">
+                                        <tr>
+                                            <th class="CCode" style="display: none; text-align: center">Currency Code</th>
+                                            <th class="Amount" style="width: 33.33%; text-align: center">Amount($)</th>
+                                            <th class="QTY" style="width: 33.33%; text-align: center">QTY</th>
+                                            <th class="TotalA" style="width: 33.33%; text-align: center">Total($)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer text-center" style="text-align: center">
+                        <button type="button" class="btn btn-sm btn-danger" style="display: none;" id="btnOpeningBack" onclick="BackfromOpeningBalanceModal()">Back</button>
+                        <button type="button" class="btn btn-sm btn-success" style="display: none;" id="btnClosingBack" onclick="BackfromClosingBalanceModal()">Back</button>
+                        <button type="button" class="btn btn-sm btn-success" style="display: none;" id="btnOpeningProceed" onclick="ProceedOpeningBalanceModal()">Start Shift</button>
+                        <button type="button" class="btn btn-sm btn-danger" style="display: none;" id="btnCloseBalanceProceed" onclick="ProceedClosingBalanceModal()">End Shift</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button);
+        </script>
+
+        <script src="/Style/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Morris.js charts -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <!-- Sparkline -->
+        <script src="/Style/plugins/sparkline/jquery.sparkline.min.js"></script>
+        <!-- jvectormap -->
+        <script src="/Style/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="/Style/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+        <!-- jQuery Knob Chart -->
+        <script src="/Style/plugins/knob/jquery.knob.js"></script>
+        <!-- daterangepicker -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+        <!-- datepicker -->
+        <script src="/Style/js/jquery-ui.js"></script>
+        <!-- Bootstrap WYSIHTML5 -->
+        <script src="/Style/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+        <!-- Slimscroll -->
+        <script src="/Style/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="/Style/plugins/fastclick/fastclick.js"></script>
+        <!-- AdminLTE App -->
+        <script src="/Style/dist/js/app.min.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="/Style/dist/js/demo.js"></script>
+        <!-- DataTables -->
+        <script src="/Style/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="/Style/plugins/datatables/dataTables.bootstrap.min.js"></script>
+        <script src="/Style/js/commonFunction.js"></script>
+        <%--  <script src="/Style/js/resetvalidation.js"></script>--%>
+        <script src="/Style/js/ASPSnippets_Pager.min.js"></script>
+        <%--<script src="/js/Calculator.js"></script>--%>
+
+        <%-- <script src="/Style/customJs/GenerateInvoice.js?v=3121212" type="text/javascript"></script>--%>
+    </form>
+</body>
+</html>

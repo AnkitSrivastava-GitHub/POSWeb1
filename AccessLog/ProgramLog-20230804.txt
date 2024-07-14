@@ -1,0 +1,5 @@
+*****  Log Start  *****
+[8/4/2023 4:32:49 PM]
+[API Method]	Login
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":null,"AutoId":0}{"UserName":"Admin","Password":"123","NewPassword":null,"CompanyAutoId":0,"SubmitterAutoId":0,"ShipAutoId":0,"CheckWriteBy":0,"ChartOfAccount":null,"PageIndex":0,"PageSize":0,"FromDate":null,"ToDate":null,"CheckFromDate":null,"CheckToDate":null}
+*****  Log End  *****

@@ -1,0 +1,5 @@
+*****  Log Start  *****
+[9/14/2023 6:13:33 PM]
+[API Method]	GenerateInvoiceAPI
+[Stack Trace]	{"AccessToken":"POSPriorware","Hashkey":"POS#@2023Priorware","DeviceId":"Andro8.5","LatLong":"7854859,44784574","AppVersion":"1.1(29)","RequestSource":"IOS","LoginId":"Admin","AutoId":1}{"UserName":null,"SearchString":null,"Password":null,"ProductName":null,"Barcode":null,"OrderNo":"ODR100002","CoupanNo":"","CoupanAmount":0.0,"Name":null,"MobileNo":null,"EmailId":null,"PaymentMethod":"Cash","CategoryId":0,"FirstName":null,"LastName":null,"DOB":null,"Address":null,"State":null,"City":null,"ZipCode":null,"OrderId":2,"CartItemId":0,"CustomerId":1,"Discount":0.0,"Quantity":0,"ProductId":0,"BrandId":0,"Favourite":0,"PageIndex":0,"PageSize":0}
+*****  Log End  *****

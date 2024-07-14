@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Include Bootstrap for styling -->
+    <link href="../../Style/customCSS/QR.css" rel="stylesheet" />
+    <script src="../../Style/js/jquery-3.7.0.min.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <div id="divPrint">
+    </div>
+    <script src="../../BarCode/QRJS.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (localStorage.getItem('BarcodeDetails') != null) {
+                PrintBarcode();
+            }
+        });
+
+        function PrintBarcode() {
+            var itemList = JSON.parse(localStorage.getItem('BarcodeDetails'));
+
+            var html2 = '<table><tbody>'; var trcount = 0, trFlag = true;
+            $.each(itemList, function (index, item) {
+                var Qty = Number(item.Qty);
+                var html = '';
+
+                html += '<td style="width:140px;height:50px;text-align:center;padding:10px 20px 10px 20px;border:2px dotted #000;"><img src="https://quickchart.io/qr?text=' + item.Barcode + '&chs=160x160&chld=L|0"><center><b>' + item.Barcode + '</b></center></td>';
+                for (var i = 1; i <= Qty; i++) {
+                    if (++trcount % 4 == 1) {
+                        html2 += '<tr style="height: 99px;">';
+                        trFlag = true;
+                    }
+                    html2 += html
+                    if (trcount % 4 == 0) {
+                        html2 += '</tr>&nbsp;&nbsp;';
+                        trFlag = false;
+                    }
+                }
+            });
+            if (trFlag) {
+                html2 += '</tr>';
+            }
+            html2 += `</tbody></table>`
+            $("#divPrint").append(html2)
+            window.print();
+        }
+    </script>
+</body>
+</html>

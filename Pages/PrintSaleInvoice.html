@@ -1,0 +1,187 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="/Style/js/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <!--<div style="margin-left: 10px; margin-right: 10px; width: 90mm; font-family: helvetica">-->
+    <div id="dv_print" style="padding-left: 10px; padding-right: 25px; width: 95mm; font-size:14px; font-family: helvetica; display:none">
+        <table style="width:100%; align-items:center">
+            <tr>
+                <td colspan="4" style="text-align:center;font-size:24px !important"><b><span id="lblComName"></span></b></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <span id="lblAddress1"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <span id="lblAddress2"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style="border:1px Solid black" />
+                    <b>INVOICE</b>
+                    <hr style="border:1px Solid black" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <table width="100%">
+                        <tr>
+                            <td style="text-align:center; width:25%">
+                                <b>Invoice No<br /><span id="spnInvoiceNo"></span></b>
+                            </td>
+                            <td style="text-align:center; width:35%"></td>
+                            <td style="text-align:center; width:40%">
+                                <b>Date & Time<br /> <span id="spnInvoiceDate" style="text-align:center"></span></b>
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <hr style="border:1px Solid black" />
+                    <table style="width:100%">
+                        <thead style="text-align:center">
+                            <tr>
+                                <td><b>SNo.</b></td>
+                                <td style="width:40%"><b>Items</b></td>
+                                <td style="width:10%"><b>Qty</b></td>
+                                <td style="width:24%;text-align:right;white-space:nowrap;"><b>Price(<span class="symbol"></span>)</b></td>
+                                <!--<td><b>Tax</b></td>-->
+                                <td style="width: 25%; text-align: right; white-space: nowrap;"><b>Total(<span class="symbol"></span>)</b></td>
+                            </tr>
+                            <tr>
+                                <td colspan="5">
+                                    <hr style="border:1px Solid black" />
+                                </td>
+                            </tr>
+                        </thead>
+
+                        <tbody id="InvoiceItemBody">
+                            <!--<tr>
+                                <td>1</td>
+                                <td>Ashtray Gold</td>
+                                <td style="text-align:center">1</td>
+                                <td style="text-align:right">11.99</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">11.99</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Ashtray Silver</td>
+                                <td style="text-align:center">1</td>
+                                <td style="text-align:right">10.99</td>
+                                <td style="text-align:right">0.00</td>
+                                <td style="text-align:right">10.99</td>
+                            </tr>-->
+                        </tbody>
+                    </table>
+                    <hr style="border:1px Solid black" />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="4">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:30%"></td>
+                            <td style="width:70%">
+                                <table style="width:100%">
+                                    <tr>
+                                        <td style="width:65%">Subtotal</td>
+                                        <td style="width:5%"> : </td>
+                                        <td style="text-align:right; width:30%"><span id="spnSubtotal"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:65%">Tax</td>
+                                        <td style="width:5%"> : </td>
+                                        <td style="text-align:right; width:30%"><span id="spnTax"></span></td>
+                                    </tr>
+                                    <tr id="trDiscount" style="display:none;">
+                                        <td style="width:65%">Discount</td>
+                                        <td style="width:5%"> : </td>
+                                        <td style="text-align:right; width:30%"><span id="spnDiscount"></span></td>
+                                    </tr>
+                                    <tr id="trLotteryTotal">
+                                        <td style="width:65%">Lottery Total</td>
+                                        <td style="width:5%"> : </td>
+                                        <td style="text-align:right; width:30%"><span id="spnLotteryTotal"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:65%"><b>Grand Total</b></td>
+                                        <td style="width:5%"> : </td>
+                                        <td style="text-align:right; width:30%"><b><span id="spnGrandTotal"></span></b></td>
+                                    </tr>
+                                    <tr id="trsHead">
+                                        <td style="width:65%;text-align:right"><b>Payment Mode</b></td>
+                                        <td style="width:5%"></td>
+                                        <td style="text-align:right; width:30%"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width:30%"></td>
+                            <td style="width:70%">
+                                <table style="width:100%">
+                                    <tbody id="InvoiceTransactionBody">
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:30%"></td>
+                            <td style="width:70%">
+                                <table style="width:100%">
+                                    <tr id="trReturnAmt" style="display:none">
+                                        <td style="width:65%"><b>Return Amount</b></td>
+                                        <td style="width:5%"> : </td>
+                                        <td style="text-align:right;width:30%"><b><span id="spnReturnAmt">0</span></b></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </td>
+
+            </tr>
+
+            <tr>
+                <td colspan="4" style="text-align:center"><strong>-----------------------------------------------</strong></td>
+            </tr>
+
+            <tr id="trHappyPoints">
+                <td colspan="4" style="text-align:center">You earned <span id="spnHappyPointCount">0</span> Reward Points on this Order.</td>
+            </tr>
+            <tr id="trFooter">
+                <td colspan="4" style="text-align:center"><b><span id="Footertxt"></span></b></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<body>
+    <div class="InvContent" id="InvContent" style="display:none;">
+        <span id="spSessionValue"></span>
+    </div>
+    <script type="text/javascript">
+        document.write('<scr' + 'ipt defer type="text/javascript" src="CustomJS/PrintSaleInvoice.js?v=' + new Date() + '"></scr' + 'ipt>');
+    </script>
+    <style>
+        table {
+            border-spacing: 0px;
+        }
+    </style>
+</body>
+</html>

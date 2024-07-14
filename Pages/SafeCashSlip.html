@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="/Style/js/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div id="dv_print" style="padding-left: 10px; padding-right: 25px; width: 95mm; font-size:14px; font-family: helvetica;">
+        <table style="width:100%; align-items:center">
+            <tr>
+                <td colspan="4" style="text-align:center;font-size:24px !important"><b><span id="lblComName"></span></b></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <span id="lblAddress1"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <span id="lblAddress2"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style="border:1px Solid black" />
+                    <b>Safe Cash <span id="spnSafeMode"></span></b>
+                    <hr style="border:1px dotted black" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <table width="100%" style="text-align:center; font-size:15px">
+                        <tr>
+                            <td style="text-align: left; white-space: nowrap;">
+                                Date & Time: &nbsp;
+                            </td>
+                            <td style="text-align: left;">
+                                <span id="spnInvoiceDate"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; white-space: nowrap;" id="Terminal">
+                                Terminal: &nbsp;
+                            </td>
+                            <td style="text-align: left">
+                                <span id="spnTerminal"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; white-space: nowrap;">
+                                <span id="spnSafeMode1"></span> ID: &nbsp;
+                            </td>
+                            <td style="text-align: left">
+                                <span id="spnSafeCashAutoId"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; white-space: nowrap;">
+                                User Name: &nbsp;
+                            </td>
+                            <td style="text-align: left">
+                                <span id="spnUserName"></span>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; white-space: nowrap;">
+                                <span id="spnSafeMode2"></span> Amount: &nbsp;
+                            </td>
+                            <td style="text-align: left">
+                                <span id="spnDAmt"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; white-space: nowrap; vertical-align: baseline;">
+                                Remark: &nbsp;
+                            </td>
+                            <td style="text-align: left; overflow-wrap: anywhere">
+                                <span id="spnReamark"></span>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center"><strong>-----------------------------------------------</strong></td>
+            </tr>
+
+
+            <tr id="trFooter">
+                <td colspan="4" style="text-align:center"><b><span id="Footertxt">Thank You!</span></b></td>
+            </tr>
+        </table>
+    </div>
+</body>
+<body>
+    <div class="InvContent" id="InvContent" style="display:none;">
+        <span id="spSessionValue"></span>
+    </div>
+    <script type="text/javascript">
+        document.write('<scr' + 'ipt defer type="text/javascript" src="CustomJS/SafeCashSlip.js?v=' + new Date() + '"></scr' + 'ipt>');
+    </script>
+    <style>
+        table {
+            border-spacing: 0px;
+        }
+    </style>
+</body>
+</html>

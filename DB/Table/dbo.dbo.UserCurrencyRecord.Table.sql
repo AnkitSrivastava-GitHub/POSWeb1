@@ -1,0 +1,18 @@
+
+
+CREATE TABLE [dbo].[UserCurrencyRecord](
+	[AutoId] [int] IDENTITY(1,1) NOT NULL,
+	[CurrencyAutoId] [int] NOT NULL,
+	[QTY] [int] NOT NULL,
+	[UserId] [int] NOT NULL,
+	[StoreId] [int] NOT NULL,
+	[BMAutoId] [int] NULL,
+	[Type] [varchar](50) NULL,
+ CONSTRAINT [PK_UserCurrencyRecord] PRIMARY KEY CLUSTERED 
+(
+	[AutoId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+

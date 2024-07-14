@@ -1,0 +1,866 @@
+//...............Changes by Abhishek 01/04/2024......................................//
+
+alter table UserDetailMaster add HourlyRate decimal(18,2)
+
+//...............Changes by Abhishek 12/23/2023......................................//
+
+alter table DraftMaster add Amount decimal(18,2)
+
+//...............Changes by Abhishek 12/23/2023......................................//
+
+ alter table ClockInOut add CloseRemark varchar(250)
+ alter table ClockInOutLog add CloseRemark varchar(250)
+
+//...............Changes by Abhishek 12/22/2023......................................//
+
+alter table BalanceMaster add CurrentBalanceStatus varchar(25),CurrentBalanceDiff decimal(18,2)
+
+//...............Changes by Abhishek 12/21/2023......................................//
+alter Table SafeCash add ShiftId int
+
+alter Table PayoutMaster add ShiftId int
+
+alter table InvoiceMaster add LeftAmt decimal(18,2)
+
+//...............Changes by Abhishek 12/20/2023......................................//
+
+alter Table InvoiceMaster add ShiftAutoId int
+
+//...............Changes by Abhishek 12/08/2023......................................//
+
+alter table InvoiceMaster add UsedRoyaltyPoints int, UsedRoyaltyAmt decimal(18,2)
+
+//...............Changes by Abhishek 12/07/2023......................................//
+
+alter Table Safecash add Status int
+
+//...............Changes by Abhishek 12/06/2023......................................//
+
+alter table RoyaltyMaster add StoreId int
+alter table SafeCash add Terminal int
+alter table AmountWiseRoyaltyPointMaster add MinOrderAmt decimal(18,2)
+alter table InvoiceMaster add EarnedRoyalty int
+
+//...............Changes by Abhishek 12/02/2023......................................//
+
+alter table ScreenMaster add StoreId int
+
+//...............Changes by Abhishek 12/01/2023......................................//
+
+alter table PoItemMaster Add VendorProductCode varchar(30)
+alter table PurchaseItemMaster Add VendorProductCode varchar(30)
+
+//...............Changes by Abhishek 11/30/2023......................................//
+
+alter table PurchaseItemMaster add ProductUnitPrice decimal(18,3), SecUnitPrice decimal(18,3)
+
+//...............Changes by Abhishek 11/29/2023......................................//
+
+alter table PoItemMaster add UnitPrice decimal(18,2),SecUnitPrice decimal(18,2)
+
+//...............Changes by Abhishek 11/28/2023......................................//
+alter TAble PurchaseInvoiceMaster add StoreId int
+alter TAble PoMaster add StoreId int
+alter TAble PoItemMaster add StoreId int
+alter table PurchaseItemMaster add StoreId int
+alter table InventoryMaster add StoreId int
+alter table PurchaseInvoiceMaster add BatchNo varchar(50)
+//...............Changes by Abhishek 11/21/2023......................................//
+
+
+--alter Table UserLogInLogMaster add IPAddress varchar(50)
+ --alter table StoreLoginLog add LogInAutoId int
+  --alter table TerminalLoginLog add LogInAutoId int
+
+//...............Changes by Abhishek 11/20/2023......................................//
+
+alter Table CouponMaster add Applied int
+
+//...............Changes by Abhishek 11/04/2023......................................//
+
+update PayoutTypeMaster set PayoutType='Purchase' where AutoId=1
+update tbl_SecurityPinMaster set Type='Admin'
+alter table tbl_SecurityPinMaster add Type varchar(100)
+
+//...............Changes by Abhishek 11/02/2023......................................//
+
+alter table NoSale add Remark varchar(300)
+
+//...............Changes by Abhishek 11/01/2023......................................//
+
+alter table PayoutMaster add Expense int,Vendor int, PayoutType int
+
+INSERT [dbo].[SequenceCodeGeneratorMaster] ( [SequenceCode], [PreSample], [PostSample], [currentSequence], [Description]) 
+VALUES ( N'ExpenseId', N'EX', N'100000', CAST(0 AS Numeric(15, 0)), N'For Expense Id')
+
+//...............Changes by Ankit 10/31/2023......................................//
+
+--select * from BrandMaster
+update BrandMaster set BrandName='Other Brand' where BrandName='No Brand'
+
+--select * from CategoryMaster
+update CategoryMaster set CategoryName='Other Category' where CategoryName='No Category'
+
+--Select *,DepartmentName from DepartmentMaster
+update DepartmentMaster set DepartmentName='Other Department' where DepartmentName='No Department'
+
+//...............Changes by Ankit 10/30/2023......................................//
+
+alter table productMaster Add MeasurementUnit varchar(50)
+alter table productMaster drop column ProductSizeName
+alter table productMaster add ProductSizeName as ([ProductName]+isnull(' - '+[Size],'')+isnull(measurementUnit,''))
+
+
+//...............Changes by Abhishek 10/25/2023......................................//
+INSERT [dbo].[SequenceCodeGeneratorMaster] ( [SequenceCode], [PreSample], [PostSample], [currentSequence], [Description]) 
+VALUES ( N'ComponentId', N'CN', N'100000', CAST(0 AS Numeric(15, 0)), N'For Component Id')
+//...................................................................................//
+
+Alter table StoreWiseProductList add Status1 int
+update StoreWiseProductList set Status1=Status 
+alter table StoreWiseProductList drop column Status
+
+create function fun_ProductStatus(
+@ProductId int,
+@StoreId int
+)
+returns int
+as
+begin
+  declare @status int=0
+  if ((Select count(1) from StoreWiseProductList where ProductId=1 and StoreId=2 and Status1=1)>0)
+  begin
+	 if ((select count(1) from ProductUnitDetail where ProductId=@ProductId and StoreId=@StoreId and Status=1)>0)
+	 begin
+		set @status= 1;
+	 end
+	 else
+	 begin
+		set @status= 0;
+	 end
+  end
+  else
+  begin
+     set @status= 0;
+  end
+  return @status
+end
+
+
+alter table StoreWiseProductList add Status as dbo.fun_ProductStatus(productId,StoreId)
+
+------------------------------------------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------------------------------------------
+alter table SKUMaster add SKUPackingName as SKUName+(Case when isnull(PackingName,'')='' then '' else '/'+PackingName end)
+alter table BalanceMaster add CreatedBy int,UpdatedBy int
+alter table BalanceMaster add StoreId int
+alter table InvoiceMaster add StoreId int
+
+-------------------------------------------------------------------------------------------------------------
+alter table DraftSKUMaster drop column [UnitPrice]
+
+ALTER function [dbo].[Fun_DraftSKUUnitPrice]
+(
+@AutoId int
+)
+returns decimal(18,2) 
+as
+begin
+declare @result decimal(18,2)
+    if (isnull((select SchemeId from DraftSKUMaster where AutoId=@AutoId),0))!=0
+    begin
+    	 Set @result=(select isnull(sum(UnitPrice),0) from SchemeItemMaster where SchemeAutoId=(select isnull(SchemeId,0) from DraftSKUMaster where AutoId=@AutoId))
+    end
+    else
+	begin
+    	 Set @result=(select isnull(sum(UnitPrice),0) from SKUItemMaster where SKUAutoId=(select isnull(SKUId,0) from DraftSKUMaster where AutoId=@AutoId))
+    end
+	return isnull(@result,0)
+end
+
+alter table DraftSKUMaster add [UnitPrice]  AS ([dbo].[Fun_DraftSKUUnitPrice]([AutoId]))
+
+alter table DraftSKUMaster drop column [Tax]
+
+ALTER function [dbo].[Fun_DraftSKUTotaltax]
+(
+@AutoId int,
+@Quantity int
+)
+returns decimal(18,2) 
+as
+begin
+
+declare @result decimal(18,2)
+
+if (isnull((select SchemeId from DraftSKUMaster where AutoId=@AutoId),0))!=0
+    begin
+    	 Set @result=(select isnull(sum(Tax),0) from SchemeItemMaster where SchemeAutoId=(select isnull(SchemeId,0) from DraftSKUMaster where AutoId=@AutoId))
+    end
+    else
+	begin
+    	 Set @result=(select isnull(sum(Tax),0) from SKUItemMaster where SKUAutoId=(select isnull(SKUId,0) from DraftSKUMaster where AutoId=@AutoId))
+    end
+	return isnull(@result,0)
+
+return @result
+end
+
+alter table DraftSKUMaster add [Tax]  AS ([dbo].[Fun_DraftSKUTotaltax]([AutoId],[Quantity]))
+
+alter table DraftSKUMaster drop column [Total]
+
+ALTER function [dbo].[Fun_DraftSKUTotal]
+(
+@AutoId int,
+@Quantity int
+)
+returns decimal(18,2) 
+as
+begin
+declare @result decimal(18,2)
+
+    if (isnull((select SchemeId from DraftSKUMaster where AutoId=@AutoId),0))!=0
+    begin
+    	 Set @result=(select isnull(sum(Total),0) from SchemeItemMaster where SchemeAutoId=(select isnull(SchemeId,0) from DraftSKUMaster where AutoId=@AutoId))
+    end
+    else
+	begin
+    	 Set @result=(select isnull(sum(SKUItemTotal),0) from SKUItemMaster where SKUAutoId=(select isnull(SKUId,0) from DraftSKUMaster where AutoId=@AutoId))
+    end
+	return isnull(@result,0)
+
+return @result
+end
+
+alter table DraftSKUMaster add [Total]  AS ([dbo].[Fun_DraftSKUTotal]([AutoId],[Quantity]))
+-------------------------------------------------------------------------------------------------------------
+alter table  DraftMaster add StoreId int
+alter table NoSale add StoreId int
+alter table CustomerMaster add StoreId int
+--------------------------------------------------------------------------------------------------------------
+
+ alter table ProductMaster add ProductSizeName as ProductName+isnull(' - '+Size,'')
+
+-----------------------------------------------------------------------------------------------------------------
+
+Generate script of each new table at the time of update
+---------------------------------------------------------------------------------------------------------------------
+
+alter table productMaster drop column [SKUCount]
+
+ALTER  function [dbo].[Fun_ProductSKUCount]
+(
+@AutoId int,
+@StoreId int
+)
+returns int
+as
+begin
+declare @result int
+Set @result=(Select distinct count(SKUAutoId) 
+from SKUItemMaster sim 
+inner join SKUMaster sm on sim.SKUAutoId=sm.AutoId
+where sim.ProductAutoId=@AutoId and sm.StoreId=@StoreId and sm.Status=1)
+return @result
+end
+
+alter table StoreWiseProductList add SKUCount as [dbo].[Fun_ProductSKUCount](ProductId,StoreId)
+
+------------------------------------------------------------------------------------------------------------------------
+alter table ProductMaster drop Column ViewImage,ImagePath
+alter table ProductUnitDetail Add StoreId int
+alter table ProductUnitDetailLog Add StoreId int 
+alter table productMaster Add CreatedByStoreId int,IsDeleted int
+alter table ProductUnitDetail Add StoreProductId int,CreatedBy int,CreatedDate datetime,CreatedByStoreId int,IsDeleted int
+alter table BarcodeMaster add StoreId int,CreatedByStoreId int, ProductUnitId int, IsDeleted int
+alter table SKUMaster add  StoreProductId int,StoreProductId int,StoreId int,CreatedByStoreId int
+alter table SKUItemMaster add StoreProductId int,CreatedBy int,CreatedDate datetime,CreatedByStoreId int, Status int,IsDeleted int
+-------------------------------------------------------------------------------------------------------------
+alter table ProductMaster drop column ManageStock 
+
+create table StoreLoginLog
+(
+AutoId Int primary key identity,
+UserId int,
+CompanyId int,
+terminalId int,
+LoginTime datetime,
+Status varchar(50)
+)
+
+--------------------------------------------------------------------------------------------------------------
+alter table SchemeMaster add FromDate datetime,ToDate datetime, SchemeDaysString varchar(500)
+alter table PayoutMaster add CompanyId int
+Alter table VendorMaster add VendorCode varchar(50)
+Alter table VendorMaster add CompanyId int
+-------------------------------------------------------------------------------------------------------------
+alter table CompanyProfile add Status int
+alter table CouponMaster  add StoreIds varchar(500) , CreatedBy int, UpdatedBy int
+---------------------------------------------------------------------------------------------------------------
+
+alter table UserDetailMaster add CompanyId int
+alter table TerminalMaster add CompanyId int
+
+---------------------------------------------------------------------------------------------------------------
+
+Open procedure [ProcProductMaster] in new quary window
+
+then drop the procedure ProcProductMaster
+
+execute below query
+
+DROP TYPE [dbo].[DT_PakingType]
+GO
+
+/****** Object:  UserDefinedTableType [dbo].[DT_PakingType]    Script Date: 9/28/2023 4:22:50 PM ******/
+CREATE TYPE [dbo].[DT_PakingType] AS TABLE(
+	[PackingName] [varchar](200) NULL,
+	NoOfPieces int null,
+	PieceSize varchar(50) null,
+	[Barcode] [varchar](200) NULL,
+	[CostPrice] [decimal](18, 2) NULL,
+	[SellingPrice] [decimal](18, 2) NULL,
+	SecondaryUnitPrice [decimal](18, 2) NULL,
+	[TaxAutoId] [int] NULL,
+	WebAvailability varchar(20) null,
+	ImageName varchar(200) null,
+	[ManageStock] [int] NULL,
+	[AvailableQty] [int] NULL,
+	[AlertQty] [int] NULL,
+	[Status] [int] NULL
+)
+GO
+
+again create ProcProductMaster
+
+insert into SequenceCodeGeneratorMaster (SequenceCode,PreSample,PostSample,currentSequence) 
+values('DepartmentId','DPT',100000,1)
+
+set identity_insert DepartmentMaster on
+insert into DepartmentMaster(AutoId, DepartmentId, DepartmentName, AgeRestrictionId, CreatedBy, CreatedDate, Status, IsDeleted)
+values(1,'DPT100001','No Department',1,1,GETDATE(),1,0)
+set identity_insert DepartmentMaster off
+------------------------------------------------------------------------------------------------------------------------------------
+alter table ProductMaster add DeptId int
+
+alter table ProductUnitDetail add SecondaryUnitPrice decimal(18,2),NoOfPieces int,SizeOfSinglePiece varchar(50),IsShowOnWeb varchar(20),ImageName varchar(500)
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+create table CardTypeMaster
+(
+AutoId int primary key identity,
+CardTypeName varchar(100),
+Status int
+)
+
+insert into CardTypeMaster(CardTypeName,Status)
+values('Amex Card',1),
+('Visa Card',1),
+('Master Card',1)
+
+------------------------------------------------------------------------------------------------------------------------------------------
+Ankit 9/18/2023
+alter table InvoiceMaster add CreatedFrom varchar(50),AppVersion varchar(50)
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+create table TerminalLoginLog
+(
+AutoId int primary key identity,
+TerminalId int,
+UserId int,
+LoginTime datetime,
+LogOutTime datetime
+)
+
+alter table TerminalMaster 
+add OccupyStatus int,CurrentUser int,LoginTime datetime,LogoutTime datetime,
+CreatedDate datetime,CreatedBy int,UpdatedDate datetime,UpdatedBy int,Status int
+
+------------------------------------------------------------------------------------------------------------------------------------------
+alter table DraftMaster add Status int
+
+
+alter table userdetailmaster add IsAppAllowed int
+
+alter table [API_LoginDetail] add ResponseCode int,ResponseMessage varchar(500),ResponseStatus varchar(50),isException int,add UserAutoId int
+
+-------------------------------------------------------------------------------------------
+alter table PurchaseInvoiceMaster add CreatedBy int,UpdatedBy int
+
+alter table PurchaseInvoiceMaster add VendorAutoId int
+
+---------------------------------------------------------------------------------------------------------------
+
+first open 'ProcPoMaster' in a sqlQuery window then execute below query and do not close the 'ProcPoMaster' query window.
+drop procedure [dbo].[ProcPoMaster]
+
+drop TYPE [dbo].[DT_PoItemMasert]
+
+CREATE TYPE [dbo].[DT_PoItemMasert] AS TABLE(
+    PoItemAutoId int NULL,
+	[ProductId] int NULL,
+	[PackingId] [int] NULL,
+	[RequiredQty] [int] NULL,
+	ActionId int null
+)
+GO
+
+
+alter table PoMaster add CreatedBy int,UpdatedBy int
+
+
+now again execute ProcPoMaster by going the 'ProcPoMaster' query window.
+---------------------------------------------------------------------------
+alter table [SKUItemMaster] drop column [PriceAfterDis]
+
+alter table [SKUItemMaster] add [PriceAfterDis] as ([UnitPrice]-[Discount])
+
+alter table [SKUItemMaster] drop column [TaxPerUnit]
+
+alter table [SKUItemMaster] add [TaxPer]  AS ([dbo].[GetTaxPer]([ProductUnitAutoId]))
+
+alter table [SKUItemMaster] drop column [Tax]
+
+ALTER function [dbo].[Fun_SKUItemTax]
+(
+@SKUItemAutoId int
+)
+returns decimal(18,2) 
+as
+begin
+declare @result decimal(18,2)
+--- For excluding Tax
+Set @result=(Select ((sim.UnitPrice-sim.Discount)*sim.Quantity)* (tm.TaxPer/100) 
+from SKUItemMaster sim 
+inner join [ProductUnitDetail] pm on pm.AutoId=SIM.[ProductUnitAutoId]
+inner join TaxMaster tm on tm.AutoId=pm.TaxAutoId
+where sim.AutoId=@SKUItemAutoId)
+return @result
+end
+
+alter table [SKUItemMaster] add [Tax]  AS ([dbo].[Fun_SKUItemTax]([AutoId]))
+
+
+alter table [SKUItemMaster] drop column [SKUItemTotal]
+
+
+ALTER function [dbo].[Fun_SKUItemTotal]
+(
+@SKUItemAutoId int
+)
+returns decimal(18,2) 
+as
+begin
+declare @result decimal(18,2)
+Set @result=(Select ((UnitPrice - Discount)* Quantity) + Tax from SKUItemMaster where AutoId=@SKUItemAutoId)
+return @result
+end
+
+alter table [SKUItemMaster] add [SKUItemTotal]  AS ([dbo].[Fun_SKUItemTotal]([AutoId]))
+
+
+
+alter table [SKUMaster] drop column [SKUUnitTotal]
+
+
+
+ALTER function [dbo].[Fun_SKUUnitTotal]
+(
+@AutoId int
+)
+returns decimal(18,2) 
+as
+begin
+
+declare @result decimal(18,2)
+Set @result=(Select SUM((UnitPrice-Discount)*Quantity) from SKUItemMaster where SKUAutoId=@AutoId)
+return @result
+end
+
+
+alter table [SKUMaster] add [SKUUnitTotal]  AS ([dbo].[Fun_SKUUnitTotal]([AutoId])
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+alter table  SchemeMaster add CreatedBy int,CreatedDate datetime,UpdatedBy int,UpdatedDate datetime
+
+
+------------------------------------------------------------------------------
+
+CREATE FUNCTION [dbo].[GetTaxAutoId] (@ProductUnitAutoId INT)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @Value INT;
+
+    SELECT @Value = TaxAutoId
+    FROM ProductUnitDetail
+    WHERE AutoId = @ProductUnitAutoId;
+
+    RETURN @Value;
+END;
+
+----------------------------------
+CREATE FUNCTION [dbo].[GetTaxPer] (@ProductUnitAutoId INT)
+RETURNS decimal(18,3)
+AS
+BEGIN
+    DECLARE @Value decimal(18,3);
+
+    SELECT @Value = TaxMaster.TaxPer
+    FROM ProductUnitDetail 
+	inner join TaxMaster on  TaxMaster.AutoId=ProductUnitDetail.TaxAutoId
+    WHERE ProductUnitDetail.AutoId = @ProductUnitAutoId;
+    RETURN @Value;
+END;
+
+---------------------------------------------------------------------------------------------------------
+
+CREATE TABLE [dbo].[SKUItemMaster](
+	[AutoId] [int] IDENTITY(1,1) NOT NULL,
+	[SKUAutoId] [int] NULL,
+	[ProductAutoId] [int] NULL,
+	[ProductUnitAutoId] [int] NULL,
+	[Quantity] [int] NULL,
+	[UnitPrice] [decimal](10, 2) NULL,
+	[Discount] [decimal](10, 2) NULL,
+	[SKUItemTotal]  AS ([dbo].[Fun_SKUItemTotal]([AutoId])),
+	[Tax]  AS ([dbo].[Fun_SKUItemTax]([AutoId])),
+	[PriceAfterDis]  AS ([UnitPrice]*[Quantity]-[Discount]),
+	[TaxAutoId]  AS ([dbo].[GetTaxAutoId]([ProductUnitAutoId])),
+	[TaxPerUnit]  AS ([dbo].[GetTaxPer]([ProductUnitAutoId])),
+ CONSTRAINT [PK_SKUItemMaster] PRIMARY KEY CLUSTERED 
+(
+	[AutoId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+
+
+-----------------------------------------------------------------------------------------------------------
+
+Drop TAble [dbo].[SchemeItemMaster]
+
+ALTER function [dbo].[Fun_SchemeItemTax]
+(
+@AutoId int
+)
+returns decimal(18,3) 
+as
+begin
+
+declare @result decimal(18,3)
+declare @InvoiceType varchar(20)=(Select SaleInvoice from CompanyProfile)
+if(@InvoiceType='Excluding Tax')
+begin
+    Set @result=(Select  (sim.UnitPrice*sim.Quantity) * case when PTM.TaxAutoId=0 then 0 else TM.TaxPer end/100 
+    from SchemeItemMaster SIM
+	inner join ProductUnitDetail PTM on PTM.AutoId=SIM.PackingAutoId
+	left join TaxMaster TM on TM.AutoId=PTM.TaxAutoId
+	where SIM.AutoId=@AutoId)
+end
+else
+begin
+    Set @result=(Select (SIM.Quantity*SIM.UnitPrice)-((SIM.Quantity*SIM.UnitPrice) *100)/
+	(100 + case when PTM.TaxAutoId=0 then 0 else TM.TaxPer end)
+    from SchemeItemMaster SIM
+	inner join ProductUnitDetail PTM on PTM.AutoId=SIM.PackingAutoId
+	left join TaxMaster TM on TM.AutoId=PTM.TaxAutoId
+	where SIM.AutoId=@AutoId)
+end
+return @result
+end
+GO
+
+CREATE TABLE [dbo].[SchemeItemMaster](
+	[AutoId] [int] IDENTITY(1,1) NOT NULL,
+	[SchemeAutoId] [int] NULL,
+	[ProductAutoId] [int] NULL,
+	[PackingAutoId] [int] NULL,
+	[Quantity] [int] NULL,
+	[UnitPrice] [decimal](10, 2) NULL,
+	[Tax]  AS ([dbo].[Fun_SchemeItemTax]([AutoId])),
+	[Total]  AS ([dbo].[Fun_SchemeItemTotal]([AutoId]))
+) ON [PRIMARY]
+GO
+
+-------------------------------------------------------------------------------------------------------
+
+
+CREATE FUNCTION dbo.GetTaxPer (@ProductUnitAutoId INT)
+RETURNS decimal(18,3)
+AS
+BEGIN
+    DECLARE @Value decimal(18,3);
+
+    SELECT @Value = TaxMaster.TaxPer
+    FROM ProductUnitDetail 
+	inner join TaxMaster on  TaxMaster.AutoId=ProductUnitDetail.TaxAutoId
+    WHERE ProductUnitDetail.AutoId = @ProductUnitAutoId;
+    RETURN @Value;
+END;
+
+
+ALTER TABLE SKUItemMaster
+ADD TaxPerUnit AS dbo.GetTaxPer(ProductUnitAutoId);
+
+------------------------------------------------------------------------------------------------------
+
+CREATE FUNCTION dbo.GetTaxAutoId (@ProductUnitAutoId INT)
+RETURNS INT
+AS
+BEGIN
+    DECLARE @Value INT;
+
+    SELECT @Value = TaxAutoId
+    FROM ProductUnitDetail
+    WHERE AutoId = @ProductUnitAutoId;
+
+    RETURN @Value;
+END;
+
+
+
+ALTER TABLE SKUItemMaster
+ADD TaxAutoId AS dbo.GetTaxAutoId(ProductUnitAutoId);
+
+----------------------------------------------------------------------------------------------------------
+
+create function FN_GetPercentage
+(
+@Num decimal(18,3),
+@Per decimal(18,3)
+)
+returns decimal(18,3)
+as
+begin
+   return (@Num*@Per)/100
+end
+
+
+alter table SKUItemMaster add PriceAfterDis as (UnitPrice*Quantity -Discount)
+
+
+------------------------------------------------------------------------------------------------------------
+
+USE [PW_POS_Final]
+GO
+
+/****** Object:  UserDefinedTableType [dbo].[DT_SKUProduct]    Script Date: 7/7/2023 8:21:42 PM ******/
+DROP TYPE [dbo].[DT_SKUProduct]
+GO
+
+/****** Object:  UserDefinedTableType [dbo].[DT_SKUProduct]    Script Date: 7/7/2023 8:21:42 PM ******/
+CREATE TYPE [dbo].[DT_SKUProduct] AS TABLE(
+	[SKUItemAutoId] [int] NULL,
+	[ProductId] [int] NULL,
+	[PackingId] [int] NULL,
+	[Quantity] [int] NULL,
+	[UnitPrice] [decimal](10, 3) NULL,
+	[Discount] [decimal](10, 3) NULL,
+	[ActionId] [int] NULL
+)
+GO
+
+
+USE [PW_POS_Final]
+GO
+
+/****** Object:  UserDefinedTableType [dbo].[DT_Barcode]    Script Date: 7/7/2023 8:22:18 PM ******/
+DROP TYPE [dbo].[DT_Barcode]
+GO
+
+/****** Object:  UserDefinedTableType [dbo].[DT_Barcode]    Script Date: 7/7/2023 8:22:18 PM ******/
+CREATE TYPE [dbo].[DT_Barcode] AS TABLE(
+	[BarcodeAutoId] [int] NULL,
+	[Barcode] [varchar](200) NULL,
+	[ActionId] [int] NULL
+)
+GO
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Alter table ProductMaster add Favorite int
+
+
+create or alter function [dbo].[Fun_ProductSKUCount]
+(
+@AutoId int
+)
+returns int
+as
+begin
+declare @result int
+Set @result=(Select distinct count(SKUAutoId) from SKUItemMaster sim inner join SKUMaster sm on sim.SKUAutoId=sm.AutoId where sim.ProductAutoId=@AutoId and sm.Status=1)
+return @result
+end
+
+
+Alter table ProductMaster add SKUCount as [dbo].[Fun_ProductSKUCount](AutoId)
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+alter table [BarcodeMaster] add IsDefault int
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+
+CREATE TABLE [dbo].[CompanyProfile](
+	[AutoId] [int] IDENTITY(1,1) NOT NULL,
+	[CompanyId] [varchar](50) NOT NULL,
+	[CompanyName] [varchar](max) NULL,
+	[ContactName] [varchar](max) NULL,
+	[BillingAddress] [varchar](max) NULL,
+	[Country] [varchar](100) NULL,
+	[State] [varchar](100) NULL,
+	[City] [varchar](200) NULL,
+	[ZipCode] [varchar](50) NULL,
+	[EmailId] [varchar](max) NULL,
+	[Website] [varchar](max) NULL,
+	[TeliPhoneNo] [varchar](20) NULL,
+	[PhoneNo] [varchar](20) NULL,
+	[FaxNo] [varchar](20) NULL,
+	[VatNo] [varchar](20) NULL,
+	[CDiscription] [varchar](max) NULL,
+	[SaleInvoice] [varchar](50) NULL,
+	[CLogo] [varchar](200) NULL,
+	[ClogoReport] [bit] NULL,
+	[Clogoprint] [bit] NULL,
+	[Inventory] [bit] NULL,
+	[Verification] [bit] NULL,
+	[PrinterName] [varchar](200) NULL,
+	[UseCreditCard] [varchar](20) NULL,
+	[CardSettlement] [varchar](20) NULL,
+	[SettlementTime] [varchar](20) NULL,
+	[SerialKey] [varchar](50) NULL,
+	[CompanyKey] [varchar](50) NULL,
+	[SubscriptionStartDate] [datetime] NULL,
+	[SubscriptionEndDate] [datetime] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[CompanyProfile] ON 
+GO
+INSERT [dbo].[CompanyProfile] ([AutoId], [CompanyId], [CompanyName], [ContactName], [BillingAddress], [Country], [State], [City], [ZipCode], [EmailId], [Website], [TeliPhoneNo], [PhoneNo], [FaxNo], [VatNo], [CDiscription], [SaleInvoice], [CLogo], [ClogoReport], [Clogoprint], [Inventory], [Verification], [PrinterName], [UseCreditCard], [CardSettlement], [SettlementTime], [SerialKey], [CompanyKey], [SubscriptionStartDate], [SubscriptionEndDate]) VALUES (12, N'CMP100009', N'Amit', N'', N'66 Middlesex Ave, Suite 205', N'USA', N'NJ', N'Iselin', N'855554', N'anil@gmail.com', N'', N'7658679005', N'4578997674', N'', N'', NULL, N'Excluding Tax', N'1688072384000_11.png', 0, 1, 0, 1, N'', N'No', NULL, NULL, N'22102310050710100806', N'1104617502', CAST(N'2023-05-22T19:12:44.023' AS DateTime), CAST(N'2023-08-20T19:12:44.023' AS DateTime))
+GO
+SET IDENTITY_INSERT [dbo].[CompanyProfile] OFF
+GO
+
+
+
+
+
+
+
+
+alter table VendorMaster add CreatedBy int,CreatedDate Datetime,UpdatedBy int,UpdatedDate datetime
+---------------------------------------------------------------------------------------------------------------------------------
+
+Alter table [dbo].[ProductMaster] Alter column [CategoryId] int
+
+
+Alter table [dbo].[ProductMaster] Alter column [BrandId] int
+
+
+SET IDENTITY_INSERT [dbo].[BrandMaster] ON 
+GO
+INSERT [dbo].[BrandMaster] ([AutoId], [BrandId], [BrandName], [Status], [APIStatus], [UpdatedBy], [UpdatedDate], [CreatedBy], [CreatedDate], [IsDeleted]) VALUES (1, N'BRN100001', N'No Brand', 1, 1, N'1', CAST(N'2023-06-06T19:35:45.323' AS DateTime), N'1', CAST(N'2023-06-06T19:35:45.323' AS DateTime), 0)
+GO
+SET IDENTITY_INSERT [dbo].[BrandMaster] OFF
+GO
+
+
+SET IDENTITY_INSERT [dbo].[CategoryMaster] ON 
+GO
+INSERT [dbo].[CategoryMaster] ([AutoId], [Categoryid], [CategoryName], [Status], [UpdatedBy], [UpdatedDate], [CreatedBy], [CreatedDate], [IsDeleted], [APIStatus]) VALUES (1, N'CAT100001', N'No Category', 1, N'1', CAST(N'2023-06-06T19:35:45.330' AS DateTime), N'1', CAST(N'2023-06-06T19:35:45.330' AS DateTime), 0, 1)
+GO
+SET IDENTITY_INSERT [dbo].[CategoryMaster] OFF
+GO
+
+
+SET IDENTITY_INSERT [dbo].[AgeRestrictionMaster] ON 
+GO
+INSERT[dbo].[AgeRestrictionMaster]([AutoId], [AgeRestrictionName], [Age]) 
+VALUES (1, 'No Age Restriction', 0)
+GO
+SET IDENTITY_INSERT [dbo].[AgeRestrictionMaster] OFF
+GO
+
+
+-----------------------------------------------------------------------------
+Alter table [UserDetailMaster] drop column [UserType],  [isActiveUser],  [HireDate]
+
+Alter table [UserDetailMaster] add [CreatedBy] [int] NULL,
+	[CreatedDate] [datetime] NULL,
+	[UpdatedBy] [int] NULL,
+	[UpdatedDate] [datetime] NULL,
+	[UserType] int  NULL,
+	[Status] [int]  NULL
+
+
+update [UserDetailMaster] set [UserType]=1 , [Status]=1
+
+
+-----------------------------------------------------------------------------
+Ankit 06/16/2023
+
+CREATE TYPE [dbo].[DT_SKUDraft] AS TABLE(
+	[SKUId] [int] NULL,
+	Barcode varchar(50) null,
+	[SKUName] [varchar](500) NULL,
+	[SchemeId] [int] NULL,
+	[Quantity] [int] NULL,
+	[UnitPrice] [decimal](18, 3) NULL,
+	[Tax] [decimal](18, 3) NULL,
+	[Amount] [decimal](18, 3) NULL
+)
+
+------------------------------------------------------------------------------
+
+Ankit 06/16/2023
+ 
+alter table DraftSKUMaster add Barcode varchar(50)
+
+-------------------------------------------------------------------------------
+
+Ankit 06/16/2023
+
+update pm set pm.BrandId=bm.AutoId, pm.CategoryId=cm.AutoId 
+  from ProductMaster pm
+  inner join BrandMaster bm on bm.BrandId=pm.BrandId
+  inner join CategoryMaster cm on cm.Categoryid=pm.CategoryId
+update pm set pm.CostPrice=ptm.CostPrice, pm.UnitPrice=ptm.UnitPrice, pm.TaxAutoId=ptm.TaxAutoId
+  from ProductMaster pm
+  inner join PackingTypeMaster ptm on pm.AutoId=ptm.ProductAutoId
+
+-------------------------------------------------------------------------------
+Ankit 06/16/2023
+
+Alter table ProductMaster add CostPrice decimal(18,2), UnitPrice decimal(18,2), TaxAutoId int
+
+-------------------------------------------------------------------------------
+Ankit 06/16/2023
+
+Alter table [CategoryMaster] drop column ParentName
+Alter table [CategoryMaster] drop column ParentId
+
+-------------------------------------------------------------------------------
+Ankit 06/16/2023
+alter table BarcodeMaster add SKUId int
+

@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="/Style/js/jquery-3.7.0.min.js"></script>
+</head>
+<body>
+    <div style="margin-left: 10px; margin-right: 10px; width: 90mm; font-family: helvetica">
+        <table style="width:100%" id="tbl_ZReport">
+            <!--<tr><td style="height:10px"></td></tr>
+            <tr>
+                <td colspan="4" style="text-align:center"><b><span id="lblComName"></span></b></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center"><span id="lblAddress1"></span></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center"><span id="lblAddress2"></span></td>
+            </tr>
+            <tr><td style="height:20px"></td></tr>
+            <tr>
+                <td colspan="2" style="text-align:left"><b>Z Report</b></td>
+                <td colspan="2" style="text-align:right"><b><span id="lblTime"></span>9:34 PM, 9/19/2023</b></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px dotted black;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center"><b>SALES AND TAXES SUMMARY </b></td>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px dotted black;" />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" style="text-align:left">No Of Transactions</td>
+                <td colspan="1" style="text-align:right">14</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align:left">Total Net Sales (without tax)</td>
+                <td colspan="1" style="text-align:right">$100.00</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align:left">Tax</td>
+                <td colspan="1" style="text-align:right">$100.00</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px dotted black;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align:left"><b>Total Sales</b></td>
+                <td colspan="1" style="text-align:right">$100.00</td>
+            </tr>
+            <tr><td style="height:20px"></td></tr>
+            <tr style="text-align: center;">
+                <td colspan="4" style="text-align: center; margin-top: 50px;">
+                    <b> SALE CATEGORIES</b>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left">Category</td>
+                <td colspan="1" style="text-align:right">Quantity</td>
+                <td colspan="1" style="text-align:right">Net Sale</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px solid black;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left">Bottled Beer Sales</td>
+                <td colspan="1" style="text-align:right">(10)</td>
+                <td colspan="1" style="text-align:right">$122.00</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left">Draft Beer Sales</td>
+                <td colspan="1" style="text-align:right">(20)</td>
+                <td colspan="1" style="text-align:right">$45.00</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left">Food Sales</td>
+                <td colspan="1" style="text-align:right">(250)</td>
+                <td colspan="1" style="text-align:right">$420.00</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px dotted black;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"><b>Total Net Sales</b></td>
+                <td colspan="2" style="text-align:right"><b>$100.00</b></td>
+            </tr>
+
+            <tr><td style="height:20px"></td></tr>
+
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <label><b>PAYMENT DETAILS</b></label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px dotted black;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> Cash</td>
+                <td colspan="2" style="text-align:right">$100.00</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> Credit Cart</td>
+                <td colspan="2" style="text-align:right">$100.00</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> Gift Cart</td>
+                <td colspan="2" style="text-align:right">$100.00</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px dotted black;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> <b>Total Payements</b></td>
+                <td colspan="2" style="text-align:right"><b>$1000.00</b></td>
+            </tr>
+            <tr><td style="height:10px"></td></tr>
+            <tr>
+                <td colspan="3" style="text-align:left"> <b>Total Payements - Total Sales</b></td>
+                <td colspan="1" style="text-align:right"><b>$1000.00</b></td>
+            </tr>
+            <tr><td style="height:30px"></td></tr>
+
+            <tr>
+                <td colspan="4" style="text-align:center"><b>TOTAL DISCOUNTS</b></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> <b>Discount Name</b></td>
+                <td colspan="1" style="text-align:right"><b>Count</b></td>
+                <td colspan="1" style="text-align:right"><b>Amount</b></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px dotted black;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> Coupan</td>
+                <td colspan="1" style="text-align:right">15</td>
+                <td colspan="1" style="text-align:right">$1000.00</td>
+            </tr>
+            <tr><td style="height:30px"></td></tr>
+
+            <tr>
+                <td colspan="4" style="text-align:center"><b>CREDIT CARD BREAKDOWN</b></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px dotted black;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> Amex</td>
+                <td colspan="2" style="text-align:right">$1000.00</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> Mastercard</td>
+                <td colspan="2" style="text-align:right">$1000.00</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> Visa</td>
+                <td colspan="2" style="text-align:right">$1000.00</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px solid black;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> <b>Total</b></td>
+                <td colspan="2" style="text-align:right"><b>$3000.00</b></td>
+            </tr>
+            <tr><td style="height:30px"></td></tr>
+            <tr>
+                <td colspan="4" style="text-align:center"><b>PAY OUT</b></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px dotted black;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> Cash</td>
+                <td colspan="2" style="text-align:right">$1000.00</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> Online</td>
+                <td colspan="2" style="text-align:right">$1000.00</td>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px solid black;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> <b>Total</b></td>
+                <td colspan="2" style="text-align:right"><b>$3000.00</b></td>
+            </tr>
+
+            <tr><td style="height:30px"></td></tr>
+            <tr>
+                <td colspan="4" style="text-align:center"><b>TAXES</b></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px dotted black;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> 6.00%</td>
+                <td colspan="2" style="text-align:right">$1000.00</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> 12.00%</td>
+                <td colspan="2" style="text-align:right">$1000.00</td>
+            </tr>
+
+            <tr>
+                <td colspan="4" style="text-align:center">
+                    <hr style=" border-top: 1px solid black;" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:left"> <b>Total</b></td>
+                <td colspan="2" style="text-align:right"><b>$3000.00</b></td>
+            </tr>
+            <tr><td style="height:40px"></td></tr>-->
+        </table>
+    </div>
+    <div class="InvContent" id="InvContent">
+        <span id="spSessionValue"></span>
+    </div>
+    <script type="text/javascript">
+document.write('<scr' + 'ipt defer type="text/javascript" src="CustomJS/Print_Z_Report.js?v=' + new Date() + '"></scr' + 'ipt>');
+    </script>
+</body>
+</html>
